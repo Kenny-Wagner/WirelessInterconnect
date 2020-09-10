@@ -60,7 +60,7 @@ def main():
     filesize = 0
     if (len_argument != 2):
       print ("")
-      print ("Error - Please provide JPG file!!!")
+      print ("Error - Please provide JPG file")
       print ("")
       print ("Correct Usage:")
       print ("python load_jpg_file.py <jpg_file>")
@@ -75,24 +75,24 @@ def main():
         filesize = getSize(binary_file)
         print("filesize and CRC", filesize, binary_crc)
     except:
-        print ("Fail to open jpg file ", sys.argv[1])
+        print ("Failed to open jpg file ", sys.argv[1])
         sys.exit(0)
 
     # Open the Serial Port
     try:
-        ser = serial.Serial('COM3', 115200, timeout=30)
+        ser = serial.Serial('COM3', 115200, timeout=30) #Make sure to change COM port to EPS's COM port
     except:
-        print ("Please check to open the correct com port!!")
+        print ("Make sure COM port is correct")
         sys.exit(0)
 
-    print ("Waiting to get the PING Message from DK Board [Timeout = 30 sec]!!")
+    print ("Waiting to get the PING Message from DK Board [Timeout = 30 sec]")
     payload_len = 3
     ping_request = ser.read(3)
 
     print (ping_request)
 
     if ping_request == '':
-          print ("[Error] : Timeout, missing the ping message from the DK board!!")
+          print ("[Error] : Timeout, missing the ping message from the DK board")
           sys.exit(0)
 
     (payload_len, opcode, mtu_len) = struct.unpack('BsB', ping_request)
@@ -141,7 +141,7 @@ def main():
             sys.exit(0)
 
         if (offset_addr+request_length > filesize):
-            print ("Error: the request offset address is outside the filesize!!")
+            print ("Error: the request offset address is outside the filesize")
             sys.exit(0)
 
 
