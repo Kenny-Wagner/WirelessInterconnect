@@ -22,17 +22,17 @@ def getSize(fileobject):
     size = fileobject.tell()
     return size
 
-def check_file_jpg(filename):
-    with open(filename, 'rb') as file:
-        first_four_bytes = file.read(4)
+#def check_file_jpg(filename):
+   #with open(filename, 'rb') as file:
+     #   first_four_bytes = file.read(4)
 
-    if first_four_bytes in jpeg_signatures:
-        print("JPEG detected.")
-        return 1
-    else:
-        print("File does not look like a JPEG.")
-        sys.exit(0)
-        return 0
+   # if first_four_bytes in jpeg_signatures:
+      #  print("JPEG detected.")
+      #  return 1
+   # else:
+       # print("File does not look like a JPEG.")
+       # sys.exit(0)
+      #  return 0
 
 
 
@@ -69,7 +69,7 @@ def main():
 
     # Open the JPG file
     try:
-        binary_file = open(sys.argv[1], 'rb')
+        binary_file = open(sys.argv[1], 'rb') #'rb' = read only in binary format
         binary_data = binary_file.read()
         binary_crc = binascii.crc32(binary_data)
         filesize = getSize(binary_file)
@@ -111,7 +111,7 @@ def main():
 
     # # Send the filesize
     payload_len = 9                    # Opcode (1) + FileSize(4) + CRC32(4)
-    ser.write(struct.pack("B", payload_len))
+    ser.write(struct.pack("B", payload_len)) #Returns byte object containing values in payload_len formatted as an unsigned char "B".
     ser.write(PAYLOAD_JPG_OPCODE_FILEINFO_RSP)
     #Send the file size
     ser.write(filesize.to_bytes(4, byteorder='little', signed=True))
@@ -131,7 +131,7 @@ def main():
         print ("Waiting for the data request [offset, length] !!!")
         data_request = ser.read(8)
         print (data_request)
-        (payload_len, opcode, request_length, offset_addr) = struct.unpack('BsHL', data_request)
+        (payload_len, opcode, request_length, offset_addr) = struct.unpack('BsHL', data_request) #Not sure why it's BsHL. B = unsigned char, s = char[], H=Unsigned short, L=unsigned long. 
         print (payload_len, opcode, "request length = ", request_length, "offset address = ", offset_addr)
 
         if ((opcode == PAYLOAD_JPG_OPCODE_DATA_REQ) or (opcode == PAYLOAD_JPG_OPCODE_DATA_RSP_LAST)):
