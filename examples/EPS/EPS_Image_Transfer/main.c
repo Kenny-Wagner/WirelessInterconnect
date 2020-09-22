@@ -84,12 +84,11 @@
 
 #define ADVERTISING_LED                 BSP_BOARD_LED_0                         /**< Is on when device is advertising. */
 #define CONNECTED_LED                   BSP_BOARD_LED_1                         /**< Is on when device has connected. */
-#define LEDBUTTON_LED                   BSP_BOARD_LED_2                         /**< LED to be toggled with the help of the LED Button Service. */
+#define PHY_1MBPS_LED                   BSP_BOARD_LED_2                         /**< Phy Code = 1 mbps */
+#define PHY_2MBPS_LED                   BSP_BOARD_LED_3                         /**< Phy Code = 2 mbps */
 
-#define LEDBUTTON_BUTTON_1              BSP_BUTTON_0                            /**< Button that will trigger the notification event with the LED Button Service */
-#define LEDBUTTON_BUTTON_2              BSP_BUTTON_1                            /**< Button that will trigger the notification event with the LED Button Service */
-#define LEDBUTTON_BUTTON_3              BSP_BUTTON_2                            /**< Button that will trigger the notification event with the LED Button Service */
-#define LEDBUTTON_BUTTON_4              BSP_BUTTON_3                            /**< Button that will trigger the notification event with the LED Button Service */
+#define PHY_BUTTON_1MBPS                BSP_BUTTON_0
+#define PHY_BUTTON_2MBPS                BSP_BUTTON_1
 
 #define DEVICE_NAME                     "EPS"                         /**< Name of device. Will be included in the advertising data. */
 
@@ -123,8 +122,8 @@
 #define TX_POWER_LEVEL                  (4)                                    /**< TX Power Level value. This will be set both in the TX Power service, in the advertising data, and also used to set the radio transmit power. */
 
 
-#define UART_TX_BUF_SIZE                256                                         /**< UART TX buffer size. */
-#define UART_RX_BUF_SIZE                256                                         /**< UART RX buffer size. */
+#define UART_TX_BUF_SIZE                512                                         /**< UART TX buffer size. */
+#define UART_RX_BUF_SIZE                512                                         /**< UART RX buffer size. */
 
 #define DEAD_BEEF                       0xDEADBEEF                              /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
 
@@ -161,6 +160,7 @@ static bool m_stream_mode_active = false;
 static ble_nus_ble_params_info_t m_ble_params_info = {20, 50, 1, 1};
 
 static uint16_t m_ble_nus_max_data_len = BLE_GATT_ATT_MTU_DEFAULT - 3;              /**< Maximum length of data (in bytes) that can be transmitted to the peer by the Nordic UART service module. */
+
 
 
 
@@ -219,6 +219,30 @@ static serial_file_object_t m_file_object = {0};
 static serial_object_data_request_t m_data_request_obj;
 static void serial_uart_response(serial_payload_file_cmd_t cmd);
 static void transfer_image_buffer(void * p_event_data, uint16_t size);
+
+//Adding PHY Stuff
+typedef enum {
+        APP_STATE_IDLE = 0,
+        APP_STATE_ADVERTISING,
+        APP_STATE_CONNECTED,
+        APP_STATE_DISCONNECTED
+} app_state_t;
+
+typedef enum {
+        APP_PHY_1M = 0,
+        APP_PHY_2M,
+        APP_PHY_MULTI,
+        APP_PHY_CODED,
+        APP_PHY_LIST_END
+} app_phy_t;
+
+typedef struct {
+        app_state_t app_state;
+        app_phy_t phy;
+} app_display_content_t;
+
+app_display_content_t m_application_state = {0};
+//End of PHY Stuff
 
 /**@brief Struct that contains pointers to the encoded advertising data. */
 static ble_gap_adv_data_t m_adv_data =
@@ -445,92 +469,6 @@ static void nrf_qwr_error_handler(uint32_t nrf_error)
 
 
 
-// /**@brief   Function for handling app_uart events.
-//  *
-//  * @details This function will receive a single character from the app_uart module and append it to
-//  *          a string. The string will be be sent over BLE when the last character received was a
-//  *          'new line' '\n' (hex 0x0A) or if the string has reached the maximum data length.
-//  */
-// /**@snippet [Handling the data received over UART] */
-// void uart_event_handle(app_uart_evt_t * p_event)
-// {
-//         static uint8_t data_array[BLE_NUS_MAX_DATA_LEN];
-//         static uint8_t index = 0;
-//         uint32_t err_code;
-//
-//         switch (p_event->evt_type)
-//         {
-//         case APP_UART_DATA_READY:
-//                 UNUSED_VARIABLE(app_uart_get(&data_array[index]));
-//                 index++;
-//
-//                 if ((data_array[index - 1] == '\n') ||
-//                     (data_array[index - 1] == '\r') ||
-//                     (index >= m_ble_nus_max_data_len))
-//                 {
-//                         if (index > 1)
-//                         {
-//                                 NRF_LOG_DEBUG("Ready to send data over BLE NUS");
-//                                 NRF_LOG_HEXDUMP_DEBUG(data_array, index);
-//                                 do
-//                                 {
-//                                         uint16_t length = (uint16_t)index;
-//                                         err_code = ble_nus_data_send(&m_nus, data_array, &length, m_conn_handle);
-//                                         if ((err_code != NRF_ERROR_INVALID_STATE) &&
-//                                             (err_code != NRF_ERROR_RESOURCES) &&
-//                                             (err_code != NRF_ERROR_NOT_FOUND))
-//                                         {
-//                                                 APP_ERROR_CHECK(err_code);
-//                                         }
-//                                 } while (err_code == NRF_ERROR_RESOURCES);
-//                         }
-//                 }
-//                 break;
-//
-//         case APP_UART_COMMUNICATION_ERROR:
-//                 APP_ERROR_HANDLER(p_event->data.error_communication);
-//                 break;
-//
-//         case APP_UART_FIFO_ERROR:
-//                 APP_ERROR_HANDLER(p_event->data.error_code);
-//                 break;
-//
-//         default:
-//                 break;
-//         }
-// }
-//
-// /**@brief  Function for initializing the UART module.
-//  */
-// /**@snippet [UART Initialization] */
-// static void uart_init(void)
-// {
-//         uint32_t err_code;
-//         app_uart_comm_params_t const comm_params =
-//         {
-//                 .rx_pin_no    = RX_PIN_NUMBER,
-//                 .tx_pin_no    = TX_PIN_NUMBER,
-//                 .rts_pin_no   = RTS_PIN_NUMBER,
-//                 .cts_pin_no   = CTS_PIN_NUMBER,
-//                 .flow_control = APP_UART_FLOW_CONTROL_DISABLED,
-//                 .use_parity   = false,
-// #if defined (UART_PRESENT)
-//                 .baud_rate    = NRF_UART_BAUDRATE_115200
-// #else
-//                 .baud_rate    = NRF_UARTE_BAUDRATE_115200
-// #endif
-//         };
-//
-//         APP_UART_FIFO_INIT(&comm_params,
-//                            UART_RX_BUF_SIZE,
-//                            UART_TX_BUF_SIZE,
-//                            uart_event_handle,
-//                            APP_IRQ_PRIORITY_LOWEST,
-//                            err_code);
-//         APP_ERROR_CHECK(err_code);
-// }
-// /**@snippet [UART Initialization] */
-
 
 static void nus_data_handler(ble_nus_t * p_nus, uint8_t const * p_data, uint16_t length)
 {
@@ -650,6 +588,30 @@ static void conn_params_init(void)
         APP_ERROR_CHECK(err_code);
 }
 
+//PHY STUFF
+static void request_phy(uint16_t c_handle, uint8_t phy)
+{
+        ble_gap_phys_t phy_req;
+        phy_req.tx_phys = phy;
+        phy_req.rx_phys = phy;
+        sd_ble_gap_phy_update(c_handle, &phy_req);
+        NRF_LOG_INFO("Request to do the PHY update");
+
+        switch (phy)
+        {
+        case BLE_GAP_PHY_1MBPS:
+                bsp_board_led_on(PHY_1MBPS_LED);
+                bsp_board_led_off(PHY_2MBPS_LED);
+                break;
+        case BLE_GAP_PHY_2MBPS:
+                bsp_board_led_on(PHY_2MBPS_LED);
+                bsp_board_led_off(PHY_1MBPS_LED);
+                break;
+        default:
+                break;
+        }
+}
+//END OF PHY STUFF
 
 /**@brief Function for starting advertising.
  */
@@ -690,9 +652,20 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                 APP_ERROR_CHECK(err_code);
 
                 tx_power_set();
+                
+                //PHY STUFF
+                NRF_LOG_INFO("m_application_state = %d", m_application_state.phy);
 
+                if (m_application_state.phy == APP_PHY_2M)
+                {
+                        request_phy(0, BLE_GAP_PHY_2MBPS);
+                }
+                m_application_state.app_state = APP_STATE_CONNECTED;
                 break;
-        case BLE_GAP_EVT_CONN_PARAM_UPDATE:
+                //END OF PHY STUFF
+     
+                break;
+        case BLE_GAP_EVT_CONN_PARAM_UPDATE_REQUEST:
         {
                 ble_gap_evt_t const * p_gap_evt = &p_ble_evt->evt.gap_evt;
                 NRF_LOG_INFO("Connection interval updated: 0x%x, 0x%x.",
@@ -718,9 +691,9 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                 APP_ERROR_CHECK(err_code);
                 break;
 
-        case BLE_GAP_EVT_PHY_UPDATE_REQUEST:
+         case BLE_GAP_EVT_PHY_UPDATE_REQUEST:
         {
-                NRF_LOG_DEBUG("PHY update request.");
+                NRF_LOG_INFO("PHY update request.");
                 ble_gap_phys_t const phys =
                 {
                         .rx_phys = BLE_GAP_PHY_AUTO,
@@ -728,6 +701,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                 };
                 err_code = sd_ble_gap_phy_update(p_ble_evt->evt.gap_evt.conn_handle, &phys);
                 APP_ERROR_CHECK(err_code);
+
         } break;
 
         case BLE_GATTS_EVT_SYS_ATTR_MISSING:
@@ -805,15 +779,33 @@ static void ble_stack_init(void)
  */
 static void button_event_handler(uint8_t pin_no, uint8_t button_action)
 {
-        ret_code_t err_code;
+     ret_code_t err_code;
 
         switch (pin_no)
         {
-
-        case LEDBUTTON_BUTTON_1:
+        case PHY_BUTTON_1MBPS:
+                if (button_action == APP_BUTTON_PUSH)
+                {
+                        if (m_application_state.phy != APP_PHY_1M)
+                        {
+                                request_phy(0, BLE_GAP_PHY_1MBPS);
+                                NRF_LOG_INFO("Request to do the PHY update 1MBPS");
+                                m_application_state.phy = APP_PHY_1M;
+                        }
+                }
                 break;
 
-
+        case PHY_BUTTON_2MBPS:
+                if (button_action == APP_BUTTON_PUSH)
+                {
+                        if (m_application_state.phy != APP_PHY_2M)
+                        {
+                                request_phy(0, BLE_GAP_PHY_2MBPS);
+                                NRF_LOG_INFO("Request to do the PHY update 2MBPS");
+                                m_application_state.phy = APP_PHY_2M;
+                        }
+                }
+                break;
         default:
                 APP_ERROR_HANDLER(pin_no);
                 break;
@@ -830,11 +822,15 @@ static void buttons_init(void)
         //The array must be static because a pointer to it will be saved in the button handler module.
         static app_button_cfg_t buttons[] =
         {
-                {LEDBUTTON_BUTTON_1, false, BUTTON_PULL, button_event_handler},
+                {PHY_BUTTON_1MBPS, false, BUTTON_PULL, button_event_handler},
+                {PHY_BUTTON_2MBPS, false, BUTTON_PULL, button_event_handler},
         };
 
         err_code = app_button_init(buttons, ARRAY_SIZE(buttons),
                                    BUTTON_DETECTION_DELAY);
+        APP_ERROR_CHECK(err_code);
+
+        err_code = app_button_enable();
         APP_ERROR_CHECK(err_code);
 }
 
@@ -1074,6 +1070,7 @@ static uint32_t serial_file_transport_init(void)
         uart_config.hwfc      = false ?
                                 NRF_UART_HWFC_ENABLED : NRF_UART_HWFC_DISABLED;
         uart_config.p_context = NULL;
+        uart_config.baudrate  = UART_BAUDRATE_BAUDRATE_Baud230400;
 
         err_code =  nrf_drv_uart_init(&m_uart, &uart_config, serial_uart_event_handler);
         if (err_code != NRF_SUCCESS)
@@ -1102,6 +1099,17 @@ static uint32_t serial_file_transport_close(void)
         return NRF_SUCCESS;
 }
 
+void conn_evt_len_ext_set(void) //Extending data length
+{
+    ret_code_t err_code;
+    ble_opt_t  opt;
+
+    memset(&opt, 0x00, sizeof(opt));
+    opt.common_opt.conn_evt_ext.enable =1;
+
+    err_code = sd_ble_opt_set(BLE_COMMON_OPT_CONN_EVT_EXT, &opt);
+    APP_ERROR_CHECK(err_code);
+}
 /**@brief Function for application main entry.
  */
 int main(void)
@@ -1129,7 +1137,8 @@ int main(void)
         services_init();
         advertising_init();
         conn_params_init();
-
+        conn_evt_len_ext_set(); // Extending data length
+      
         // Start execution.
         NRF_LOG_INFO("EPS Image Transfer Demo");
         advertising_start();

@@ -1,5 +1,5 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/hardfault_implementation.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\hardfault\hardfault_implementation.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\hardfault\hardfault_implementation.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
@@ -29,7 +29,7 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/hardfault_implementation.o: 
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\hardfault\hardfault.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\hardfault\hardfault.h \
  ../../../../../../components/libraries/util/app_util_platform.h \
  ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \

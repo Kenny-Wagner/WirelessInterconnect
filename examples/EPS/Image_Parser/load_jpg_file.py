@@ -80,7 +80,7 @@ def main():
 
     # Open the Serial Port
     try:
-        ser = serial.Serial('COM3', 115200, timeout=30) #Make sure to change COM port to EPS's COM port
+        ser = serial.Serial('COM3', 230400, timeout=30) #Make sure to change COM port to EPS's COM port
     except:
         print ("Make sure COM port is correct")
         sys.exit(0)

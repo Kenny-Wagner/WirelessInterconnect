@@ -1,5 +1,5 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrf_section_iter.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\experimental_section_vars\nrf_section_iter.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\experimental_section_vars\nrf_section_iter.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
@@ -29,8 +29,8 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrf_section_iter.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\experimental_section_vars\nrf_section_iter.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\experimental_section_vars\nrf_section.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\experimental_section_vars\nrf_section_iter.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\experimental_section_vars\nrf_section.h \
  ../../../../../../components/libraries/util/nordic_common.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
  ../../../../../../components/libraries/util/app_util.h

@@ -1,5 +1,5 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/ble_image_transfer_service.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\examples\EPS_MVP\sdk_mod\ble_image_transfer_service\ble_image_transfer_service.c \
+ C:\Nordic_Semi\WirelessInterconnect\examples\EPS\sdk_mod\ble_image_transfer_service\ble_image_transfer_service.c \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdio.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/__crossworks.h \
  ../../../../../../components/libraries/util/sdk_common.h \
@@ -30,7 +30,7 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/ble_image_transfer_service.o
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\examples\EPS_MVP\sdk_mod\ble_image_transfer_service\ble_image_transfer_service.h \
+ C:\Nordic_Semi\WirelessInterconnect\examples\EPS\sdk_mod\ble_image_transfer_service\ble_image_transfer_service.h \
  ../../../../../../components/softdevice/s140/headers/ble.h \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/softdevice/s140/headers/nrf_error.h \

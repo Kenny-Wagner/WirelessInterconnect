@@ -1,5 +1,5 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrf_atflags.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\atomic_flags\nrf_atflags.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\atomic_flags\nrf_atflags.c \
  ../../../../../../modules/nrfx/mdk/nrf.h \
  ../../../../../../modules/nrfx/mdk/nrf52840.h \
  ../../../../../../components/toolchain/cmsis/include/core_cm4.h \
@@ -30,4 +30,4 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrf_atflags.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\atomic_flags\nrf_atflags.h
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\atomic_flags\nrf_atflags.h

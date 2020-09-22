@@ -1,6 +1,6 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/ble_advdata.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\ble\common\ble_advdata.c \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\ble\common\ble_advdata.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\ble\common\ble_advdata.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\ble\common\ble_advdata.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/string.h \
@@ -43,7 +43,7 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/ble_advdata.o: \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
  ../../../../../../components/softdevice/s140/headers/ble_gap.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\ble\common\ble_srv_common.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\ble\common\ble_srv_common.h \
  ../../../../../../components/softdevice/s140/headers/ble_types.h \
  ../../../../../../components/libraries/util/app_util.h \
  ../../../../../../components/softdevice/s140/headers/ble_gatt.h

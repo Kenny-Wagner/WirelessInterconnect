@@ -1,7 +1,7 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/SEGGER_RTT.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\external\segger_rtt\SEGGER_RTT.c \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\external\segger_rtt\SEGGER_RTT.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\external\segger_rtt\SEGGER_RTT_Conf.h \
+ C:\Nordic_Semi\WirelessInterconnect\external\segger_rtt\SEGGER_RTT.c \
+ C:\Nordic_Semi\WirelessInterconnect\external\segger_rtt\SEGGER_RTT.h \
+ C:\Nordic_Semi\WirelessInterconnect\external\segger_rtt\SEGGER_RTT_Conf.h \
  ../../../../../../components/libraries/util/nordic_common.h \
  ../../../../../../components/libraries/util/app_util_platform.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \

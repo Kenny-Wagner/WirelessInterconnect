@@ -1,5 +1,5 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/app_scheduler.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\scheduler\app_scheduler.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\scheduler\app_scheduler.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
@@ -29,7 +29,7 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/app_scheduler.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\scheduler\app_scheduler.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\scheduler\app_scheduler.h \
  ../../../../../../components/libraries/util/app_error.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdio.h \
  ../../../../../../components/libraries/util/app_error_weak.h \

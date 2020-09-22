@@ -1,5 +1,5 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/main.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\examples\ble_central\C&DH_Experimental\main.c \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central\C&DH\main.c \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdio.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/__crossworks.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \

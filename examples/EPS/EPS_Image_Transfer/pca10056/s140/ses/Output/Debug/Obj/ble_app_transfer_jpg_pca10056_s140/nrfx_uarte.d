@@ -1,5 +1,5 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrfx_uarte.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\modules\nrfx\drivers\src\nrfx_uarte.c \
+ C:\Nordic_Semi\WirelessInterconnect\modules\nrfx\drivers\src\nrfx_uarte.c \
  ../../../../../../modules/nrfx/nrfx.h \
  ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \
  ../../../../../../modules/nrfx/drivers/nrfx_common.h \
@@ -53,7 +53,7 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrfx_uarte.o: \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
  ../../../../../../modules/nrfx/drivers/include/nrfx_uarte.h \
  ../../../../../../modules/nrfx/hal/nrf_uarte.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\modules\nrfx\drivers\src\prs/nrfx_prs.h \
+ C:\Nordic_Semi\WirelessInterconnect\modules\nrfx\drivers\src\prs/nrfx_prs.h \
  ../../../../../../modules/nrfx/hal/nrf_gpio.h \
  ../../../../../../integration/nrfx/nrfx_log.h \
  ../../../../../../components/libraries/log/nrf_log.h \

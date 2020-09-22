@@ -1,6 +1,6 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/boards.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\boards\boards.c \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\boards\boards.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\boards\boards.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\boards\boards.h \
  ../../../../../../modules/nrfx/hal/nrf_gpio.h \
  ../../../../../../modules/nrfx/nrfx.h \
  ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \
@@ -53,4 +53,4 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/boards.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
  ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\boards\pca10056.h
+ C:\Nordic_Semi\WirelessInterconnect\components\boards\pca10056.h

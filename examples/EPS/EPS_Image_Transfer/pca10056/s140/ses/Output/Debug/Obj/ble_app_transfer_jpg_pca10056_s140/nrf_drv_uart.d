@@ -1,6 +1,6 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrf_drv_uart.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\integration\nrfx\legacy\nrf_drv_uart.c \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\integration\nrfx\legacy\nrf_drv_uart.h \
+ C:\Nordic_Semi\WirelessInterconnect\integration\nrfx\legacy\nrf_drv_uart.c \
+ C:\Nordic_Semi\WirelessInterconnect\integration\nrfx\legacy\nrf_drv_uart.h \
  ../../../../../../modules/nrfx/nrfx.h \
  ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \
  ../../../../../../modules/nrfx/drivers/nrfx_common.h \

@@ -1,5 +1,5 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrf_sdh_ble.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\softdevice\common\nrf_sdh_ble.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\softdevice\common\nrf_sdh_ble.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
@@ -29,7 +29,7 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrf_sdh_ble.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\softdevice\common\nrf_sdh_ble.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\softdevice\common\nrf_sdh_ble.h \
  ../../../../../../components/libraries/util/app_util.h \
  ../../../../../../components/softdevice/s140/headers/ble.h \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
@@ -48,7 +48,7 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/nrf_sdh_ble.o: \
  ../../../../../../components/libraries/util/nordic_common.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\softdevice\common\nrf_sdh.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\softdevice\common\nrf_sdh.h \
  ../../../../../../components/libraries/util/app_error.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdio.h \
  ../../../../../../components/libraries/util/app_error_weak.h \

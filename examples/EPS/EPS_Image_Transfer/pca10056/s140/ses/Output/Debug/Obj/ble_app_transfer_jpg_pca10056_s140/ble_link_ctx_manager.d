@@ -1,6 +1,6 @@
 Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/ble_link_ctx_manager.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\ble\ble_link_ctx_manager\ble_link_ctx_manager.c \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\ble\ble_link_ctx_manager\ble_link_ctx_manager.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\ble\ble_link_ctx_manager\ble_link_ctx_manager.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\ble\ble_link_ctx_manager\ble_link_ctx_manager.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  ../../../../../../components/ble/common/ble_conn_state.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
