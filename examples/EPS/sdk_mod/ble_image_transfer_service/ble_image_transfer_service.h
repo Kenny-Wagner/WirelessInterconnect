@@ -154,7 +154,7 @@ struct ble_nus_s
 
 enum {
         APP_CMD_NOCOMMAND=0,
-        APP_CMD_SEND_PING,
+        APP_CMD_SEND_PING='c',
         APP_CMD_SEND_BUFFER_REQ,
         APP_CMD_SEND_BUFFER_COMPLETE,
 };

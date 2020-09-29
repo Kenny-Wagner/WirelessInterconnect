@@ -1067,10 +1067,10 @@ static uint32_t serial_file_transport_init(void)
         uart_config.pselrxd   = RX_PIN_NUMBER;
         uart_config.pselcts   = CTS_PIN_NUMBER;
         uart_config.pselrts   = RTS_PIN_NUMBER;
-        uart_config.hwfc      = false ?
+        uart_config.hwfc      = true ?
                                 NRF_UART_HWFC_ENABLED : NRF_UART_HWFC_DISABLED;
         uart_config.p_context = NULL;
-        uart_config.baudrate  = UART_BAUDRATE_BAUDRATE_Baud230400;
+        uart_config.baudrate  = UART_BAUDRATE_BAUDRATE_Baud1M;
 
         err_code =  nrf_drv_uart_init(&m_uart, &uart_config, serial_uart_event_handler);
         if (err_code != NRF_SUCCESS)
