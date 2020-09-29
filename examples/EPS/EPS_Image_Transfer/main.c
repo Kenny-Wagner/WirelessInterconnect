@@ -135,13 +135,6 @@ NRF_BLE_GATT_DEF(m_gatt);                                                       
 NRF_BLE_QWR_DEF(m_qwr);                                                         /**< Context for the Queued Write module.*/
 
 
-#define BATTERY_LEVEL_MEAS_INTERVAL         APP_TIMER_TICKS(1000)                   /**< Battery level measurement interval (ticks). */
-#define MIN_BATTERY_LEVEL                   81                                      /**< Minimum simulated battery level. */
-#define MAX_BATTERY_LEVEL                   100                                     /**< Maximum simulated 7battery level. */
-#define BATTERY_LEVEL_INCREMENT             1                                       /**< Increment between each simulated battery level measurement. */
-
-APP_TIMER_DEF(m_battery_timer_id);                                  /**< Battery timer. */
-
 static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        /**< Handle of the current connection. */
 
 static uint8_t m_adv_handle = BLE_GAP_ADV_SET_HANDLE_NOT_SET;                   /**< Advertising handle used to identify an advertising set. */
@@ -153,11 +146,6 @@ static uint8_t m_rx_byte[UART_RX_BUF_SIZE];
 
 static uint8_t m_rx_image_buffer[IMAGE_BUFFER_SIZE];
 static uint16_t m_rx_image_buffer_len = 0;
-
-static uint8_t m_new_command_received = 0;
-static uint8_t m_new_phy;
-static bool m_stream_mode_active = false;
-static ble_nus_ble_params_info_t m_ble_params_info = {20, 50, 1, 1};
 
 static uint16_t m_ble_nus_max_data_len = BLE_GATT_ATT_MTU_DEFAULT - 3;              /**< Maximum length of data (in bytes) that can be transmitted to the peer by the Nordic UART service module. */
 
@@ -313,13 +301,6 @@ static void timers_init(void)
         // Initialize timer module, making it use the scheduler
         ret_code_t err_code = app_timer_init();
         APP_ERROR_CHECK(err_code);
-
-        // Create timers.
-        err_code = app_timer_create(&m_battery_timer_id,
-                                    APP_TIMER_MODE_REPEATED,
-                                    battery_level_meas_timeout_handler);
-        APP_ERROR_CHECK(err_code);
-
 }
 
 /**@brief Function for changing the tx power.
@@ -368,25 +349,14 @@ static void gap_params_init(void)
 /**@brief Function for handling events from the GATT library. */
 void gatt_evt_handler(nrf_ble_gatt_t * p_gatt, nrf_ble_gatt_evt_t const * p_evt)
 {
-        uint32_t data_length;
-        if ((m_conn_handle == p_evt->conn_handle) && (p_evt->evt_id == NRF_BLE_GATT_EVT_ATT_MTU_UPDATED))
-        {
-                data_length = p_evt->params.att_mtu_effective - OPCODE_LENGTH - HANDLE_LENGTH;
-                //m_ble_params_info.mtu = m_ble_nus_max_data_len;
-                m_ble_mtu_length = data_length;
-                m_ble_nus_max_data_len = data_length;
-                NRF_LOG_INFO("gatt_event: ATT MTU is set to 0x%X (%d)", data_length, data_length);
-        }
-        else if ((m_conn_handle == p_evt->conn_handle) && (p_evt->evt_id == NRF_BLE_GATT_EVT_DATA_LENGTH_UPDATED))
-        {
-                data_length = p_evt->params.att_mtu_effective - OPCODE_LENGTH - HANDLE_LENGTH - 4;
-                m_ble_mtu_length = data_length;
-                m_ble_nus_max_data_len = data_length;
-                NRF_LOG_INFO("gatt_event: Data len is set to 0x%X (%d)", data_length, data_length);
-        }
-        NRF_LOG_DEBUG("ATT MTU exchange completed. central 0x%x peripheral 0x%x",
-                      p_gatt->att_mtu_desired_central,
-                      p_gatt->att_mtu_desired_periph);
+       if ((m_conn_handle == p_evt->conn_handle) && (p_evt->evt_id == NRF_BLE_GATT_EVT_ATT_MTU_UPDATED))
+    {
+        m_ble_nus_max_data_len = p_evt->params.att_mtu_effective - OPCODE_LENGTH - HANDLE_LENGTH;
+        NRF_LOG_INFO("Data len is set to 0x%X(%d)", m_ble_nus_max_data_len, m_ble_nus_max_data_len);
+    }
+    NRF_LOG_DEBUG("ATT MTU exchange completed. central 0x%x peripheral 0x%x",
+                  p_gatt->att_mtu_desired_central,
+                  p_gatt->att_mtu_desired_periph);
 }
 
 /**@brief Function for initializing the GATT module.
@@ -400,11 +370,6 @@ static void gatt_init(void)
 
         err_code = nrf_ble_gatt_att_mtu_periph_set(&m_gatt, NRF_SDH_BLE_GATT_MAX_MTU_SIZE);
         APP_ERROR_CHECK(err_code);
-
-#if !defined(S112)
-        err_code = nrf_ble_gatt_data_length_set(&m_gatt, BLE_CONN_HANDLE_INVALID, NRF_SDH_BLE_GAP_DATA_LENGTH);
-        APP_ERROR_CHECK(err_code);
-#endif
 }
 
 
@@ -646,11 +611,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                 m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
                 err_code = nrf_ble_qwr_conn_handle_assign(&m_qwr, m_conn_handle);
                 APP_ERROR_CHECK(err_code);
-
-                // Start application timers.
-                err_code = app_timer_start(m_battery_timer_id, BATTERY_LEVEL_MEAS_INTERVAL, NULL);
-                APP_ERROR_CHECK(err_code);
-
+               
                 tx_power_set();
                 
                 //PHY STUFF

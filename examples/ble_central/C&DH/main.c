@@ -76,7 +76,7 @@
 #define APP_BLE_OBSERVER_PRIO   3                                       /**< BLE observer priority of the application. There is no need to modify this value. */
 
 #define UART_TX_BUF_SIZE        4096                                     /**< UART TX buffer size. Must be power of 2 */
-#define UART_RX_BUF_SIZE        512                                     /**< UART RX buffer size. Must be power of 2*/
+#define UART_RX_BUF_SIZE        256                                     /**< UART RX buffer size. Must be power of 2*/
 
 #define NUS_SERVICE_UUID_TYPE   BLE_UUID_TYPE_VENDOR_BEGIN              /**< UUID type for the Nordic UART Service (vendor specific). */
 
