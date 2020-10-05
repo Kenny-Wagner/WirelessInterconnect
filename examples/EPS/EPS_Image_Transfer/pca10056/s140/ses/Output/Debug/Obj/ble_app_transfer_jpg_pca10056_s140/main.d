@@ -87,7 +87,7 @@ Output/Debug/Obj/ble_app_transfer_jpg_pca10056_s140/main.o: \
  ../../../../../../components/boards/pca10056.h \
  ../../../../../../components/libraries/timer/app_timer.h \
  ../../../../../../components/libraries/button/app_button.h \
- ../../../../sdk_mod/ble_image_transfer_service/ble_image_transfer_service.h \
+ ../../../../../../components/ble/ble_services/ble_nus/ble_image_transfer_service.h \
  ../../../../../../components/ble/ble_link_ctx_manager/ble_link_ctx_manager.h \
  ../../../../../../components/ble/common/ble_conn_state.h \
  ../../../../../../components/libraries/atomic/nrf_atomic.h \

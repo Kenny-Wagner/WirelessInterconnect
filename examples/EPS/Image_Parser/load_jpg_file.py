@@ -53,8 +53,6 @@ file_crc32      =   "global"
 
 def main():
 
-    DEFAULT_MTU_LEN             =   20
-
     # print ("Number of argument = ", len(sys.argv))
     len_argument = len(sys.argv)
     filesize = 0

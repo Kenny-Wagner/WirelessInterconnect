@@ -487,8 +487,6 @@ uint32_t ble_nus_init(ble_nus_t * p_nus, const ble_nus_init_t * p_nus_init)
         // Add the Image Info Characteristic.
         err_code = img_info_char_add(p_nus, p_nus_init);
         VERIFY_SUCCESS(err_code);
-
-
         return NRF_SUCCESS;
 }
 

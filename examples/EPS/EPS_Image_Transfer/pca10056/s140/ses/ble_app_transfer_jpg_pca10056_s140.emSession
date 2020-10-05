@@ -4,7 +4,7 @@
   <BookmarkItem objectName="" line="560" column="0" path="C:/Dropbox (Personal)/Nordic/SDK15.3/github/nrf52_ble_transfer_jpg/ble_app_transfer_jpg/main.c" number="1" extra="ble_its_send_file(&amp;m_its, _actest_image, sizeof(_actest_image), m_ble_its_max_data_len);" color="5"/>
  </Bookmarks>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <BreakpointListItem trigger="" line="100" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="../../../../../../components/libraries/util/app_error_weak.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="100" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="../../../../../../components/libraries/util/app_error_weak.c" useHWbreakpoint="false"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
  <FrameBufferWindow>
@@ -79,16 +79,14 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="32" y="156" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="663" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="353" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_util.h" selected="0" top="330" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="12363" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="12338" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="969" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s140/headers/ble_gap.h" selected="0" top="946" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="283" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s140/headers/ble.h" selected="0" top="278" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="194" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_uart.h" selected="0" top="177" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="107" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/integration/nrfx/legacy/nrf_drv_uart.h" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_uart.h" selected="0" top="89" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="16" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../sdk_mod/ble_image_transfer_service/ble_image_transfer_service.c" selected="0" top="15" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="170" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../sdk_mod/ble_image_transfer_service/ble_image_transfer_service.h" selected="0" top="149" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="94" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.h" selected="0" top="94" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="372" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="344" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="27" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../sdk_mod/ble_image_transfer_service/ble_image_transfer_service.c" selected="0" top="24" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/sdk_mod/ble_image_transfer_service/ble_image_transfer_service.c" useBinaryEdit="0" left="0" path="../../../../sdk_mod/ble_image_transfer_service/ble_image_transfer_service.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="5725" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/integration/nrfx/legacy/nrf_drv_uart.h" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="5702" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="135" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh_ble.c" selected="0" top="107" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="219" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_uart.h" selected="0" top="174" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="98" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/timer/app_timer.h" selected="0" top="75" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="425" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/EPS/EPS_Image_Transfer/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.c" selected="0" top="411" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="ble_app_transfer_jpg_pca10056_s140" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 4.12/source/thumb_crt0.s&#xa;&#xa;C:/Users/Jimmy/Dropbox/Nordic/SDK15.3/modules/nrfx/mdk/ses_startup_nrf52840.s&#xa;&#xa;C:/Users/Jimmy/Dropbox/Nordic/SDK15.3/modules/nrfx/mdk/ses_startup_nrf_common.s&#xa;" fileDialogInitialDirectory="C:/Dropbox (Personal)/Nordic/SDK15.3/components/libraries/hardfault" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

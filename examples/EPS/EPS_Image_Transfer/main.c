@@ -116,18 +116,18 @@
 #ifdef SVCALL_AS_NORMAL_FUNCTION
 #define SCHED_QUEUE_SIZE                    40                                         /**< Maximum number of events in the scheduler queue. More is needed in case of Serialization. */
 #else
-#define SCHED_QUEUE_SIZE                    20                                         /**< Maximum number of events in the scheduler queue. */
+#define SCHED_QUEUE_SIZE                    40                                         /**< Maximum number of events in the scheduler queue. */
 #endif
 
 #define TX_POWER_LEVEL                  (4)                                    /**< TX Power Level value. This will be set both in the TX Power service, in the advertising data, and also used to set the radio transmit power. */
 
 
-#define UART_TX_BUF_SIZE                512                                         /**< UART TX buffer size. */
-#define UART_RX_BUF_SIZE                512                                         /**< UART RX buffer size. */
+#define UART_TX_BUF_SIZE                256                                         /**< UART TX buffer size. */
+#define UART_RX_BUF_SIZE                256                                         /**< UART RX buffer size. */
 
 #define DEAD_BEEF                       0xDEADBEEF                              /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
 
-#define IMAGE_BUFFER_SIZE     0x1000
+#define IMAGE_BUFFER_SIZE     0x3000
 
 BLE_NUS_DEF(m_nus, NRF_SDH_BLE_TOTAL_LINK_COUNT);                                   /**< BLE JPG Transfer service instance. */
 
@@ -154,7 +154,7 @@ static uint16_t m_ble_nus_max_data_len = BLE_GATT_ATT_MTU_DEFAULT - 3;          
 
 static bool m_active = false;
 static uint16_t m_ble_mtu_length = 244;//BLE_GATT_ATT_MTU_DEFAULT - 3;
-static uint16_t m_ble_dle_length = 251;//BLE_GATT_ATT_MTU_DEFAULT - 3;
+//static uint16_t m_ble_dle_length = 251;//BLE_GATT_ATT_MTU_DEFAULT - 3;
 static bool m_file_is_sending = false;
 
 typedef enum {
@@ -370,6 +370,8 @@ static void gatt_init(void)
 
         err_code = nrf_ble_gatt_att_mtu_periph_set(&m_gatt, NRF_SDH_BLE_GATT_MAX_MTU_SIZE);
         APP_ERROR_CHECK(err_code);
+        err_code = nrf_ble_gatt_data_length_set(&m_gatt, BLE_CONN_HANDLE_INVALID, NRF_SDH_BLE_GAP_DATA_LENGTH);
+        APP_ERROR_CHECK(err_code);
 }
 
 
@@ -442,9 +444,8 @@ static void nus_data_handler(ble_nus_t * p_nus, uint8_t const * p_data, uint16_t
         //NRF_LOG_HEXDUMP_INFO(p_data, length);
         switch(p_data[0])
         {
-        // Take picture
+       
         case APP_CMD_SEND_PING:
-                m_new_command_received = p_data[0];
 
                 NRF_LOG_INFO("APP_CMD_SEND_PING");
                 serial_uart_response(PAYLOAD_FILE_OPCODE_PING);
@@ -730,6 +731,7 @@ static void ble_stack_init(void)
 
         // Register a handler for BLE events.
         NRF_SDH_BLE_OBSERVER(m_ble_observer, APP_BLE_OBSERVER_PRIO, ble_evt_handler, NULL);
+
 }
 
 
@@ -833,7 +835,7 @@ static void transfer_image_buffer(void * p_event_data, uint16_t size)
         NRF_LOG_DEBUG("transfer_image_buffer offset %04x m_rx_image_buffer_len = %04x m_ble_nus_max_data_len = %x", m_file_object.offset_req, m_rx_image_buffer_len, m_ble_nus_max_data_len);
         err_code = ble_nus_send_buffer(&m_nus, m_rx_image_buffer, m_rx_image_buffer_len, m_ble_nus_max_data_len);
         APP_ERROR_CHECK(err_code);
-        nrf_delay_ms(10);
+        //nrf_delay_ms(10);
         m_rx_image_buffer_len = 0;
 }
 
@@ -1033,6 +1035,7 @@ static uint32_t serial_file_transport_init(void)
         uart_config.p_context = NULL;
         uart_config.baudrate  = UART_BAUDRATE_BAUDRATE_Baud1M;
 
+
         err_code =  nrf_drv_uart_init(&m_uart, &uart_config, serial_uart_event_handler);
         if (err_code != NRF_SUCCESS)
         {
@@ -1092,17 +1095,18 @@ int main(void)
         buttons_init();
         power_management_init();
         ble_stack_init();
+        conn_evt_len_ext_set(); // Extending data length
         scheduler_init();
         gap_params_init();
         gatt_init();
         services_init();
         advertising_init();
         conn_params_init();
-        conn_evt_len_ext_set(); // Extending data length
       
         // Start execution.
         NRF_LOG_INFO("EPS Image Transfer Demo");
         advertising_start();
+        
 
         err_code = app_button_enable();
         APP_ERROR_CHECK(err_code);

@@ -38,7 +38,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="115" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="184" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="433" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="406" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="193" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/ble_peripheral/ble_app_uart/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/ble/ble_advertising/ble_advertising.h" selected="0" top="170" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="ble_app_uart_pca10056_s140" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
