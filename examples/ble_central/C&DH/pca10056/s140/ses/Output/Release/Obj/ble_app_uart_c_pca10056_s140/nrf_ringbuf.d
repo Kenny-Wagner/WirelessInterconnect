@@ -1,6 +1,6 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/nrf_ringbuf.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\ringbuf\nrf_ringbuf.c \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\ringbuf\nrf_ringbuf.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\ringbuf\nrf_ringbuf.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\ringbuf\nrf_ringbuf.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  ../../../../../../components/libraries/atomic/nrf_atomic.h \
  ../../../../../../components/libraries/util/sdk_common.h \

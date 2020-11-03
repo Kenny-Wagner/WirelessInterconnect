@@ -1,6 +1,6 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/bsp_btn_ble.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\bsp\bsp_btn_ble.c \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\bsp\bsp_btn_ble.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\bsp\bsp_btn_ble.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\bsp\bsp_btn_ble.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  ../../../../../../components/softdevice/s140/headers/ble.h \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
@@ -26,7 +26,7 @@ Output/Release/Obj/ble_app_uart_c_pca10056_s140/bsp_btn_ble.o: \
  ../../../../../../modules/nrfx/mdk/nrf52_to_nrf52840.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../../../components/softdevice/s140/headers/ble_gatts.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\bsp\bsp.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\bsp\bsp.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
  ../../../../../../components/boards/boards.h \
  ../../../../../../modules/nrfx/hal/nrf_gpio.h \
@@ -65,7 +65,7 @@ Output/Release/Obj/ble_app_uart_c_pca10056_s140/bsp_btn_ble.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
  ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
- ../../../../../../components/boards/pca10056.h \
+ ../../../../../../components/boards/pca10100.h \
  ../../../../../../components/libraries/button/app_button.h \
  ../../../../../../components/libraries/util/app_error.h \
  ../../../../../../components/softdevice/common/nrf_sdh_ble.h \

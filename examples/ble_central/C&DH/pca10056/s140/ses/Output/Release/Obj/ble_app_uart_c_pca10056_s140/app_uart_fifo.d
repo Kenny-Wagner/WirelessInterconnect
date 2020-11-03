@@ -1,5 +1,5 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/app_uart_fifo.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\uart\app_uart_fifo.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\uart\app_uart_fifo.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
@@ -29,7 +29,7 @@ Output/Release/Obj/ble_app_uart_c_pca10056_s140/app_uart_fifo.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\uart\app_uart.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\uart\app_uart.h \
  ../../../../../../components/libraries/util/app_util_platform.h \
  ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \

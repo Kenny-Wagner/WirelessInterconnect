@@ -1,7 +1,7 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/nrf_drv_clock.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\integration\nrfx\legacy\nrf_drv_clock.c \
+ C:\Nordic_Semi\WirelessInterconnect\integration\nrfx\legacy\nrf_drv_clock.c \
  ../../../../../../components/libraries/util/nordic_common.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\integration\nrfx\legacy\nrf_drv_clock.h \
+ C:\Nordic_Semi\WirelessInterconnect\integration\nrfx\legacy\nrf_drv_clock.h \
  ../../../../../../modules/nrfx/drivers/include/nrfx_clock.h \
  ../../../../../../modules/nrfx/nrfx.h \
  ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \

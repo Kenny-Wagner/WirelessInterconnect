@@ -89,7 +89,7 @@ Output/Release/Obj/ble_app_uart_c_pca10056_s140/main.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
  ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
- ../../../../../../components/boards/pca10056.h \
+ ../../../../../../components/boards/pca10100.h \
  ../../../../../../components/libraries/button/app_button.h \
  ../../../../../../components/softdevice/s140/headers/ble_gap.h \
  ../../../../../../components/softdevice/s140/headers/ble_hci.h \

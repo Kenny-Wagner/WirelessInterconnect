@@ -1,5 +1,5 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/nrf_queue.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\queue\nrf_queue.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\queue\nrf_queue.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
@@ -29,7 +29,7 @@ Output/Release/Obj/ble_app_uart_c_pca10056_s140/nrf_queue.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\queue\nrf_queue.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\queue\nrf_queue.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
  ../../../../../../components/libraries/util/app_util.h \

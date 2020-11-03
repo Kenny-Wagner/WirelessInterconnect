@@ -1,5 +1,5 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/nrf_log_str_formatter.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\log\src\nrf_log_str_formatter.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\log\src\nrf_log_str_formatter.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
@@ -52,7 +52,7 @@ Output/Release/Obj/ble_app_uart_c_pca10056_s140/nrf_log_str_formatter.o: \
  ../../../../../../components/libraries/log/nrf_log_instance.h \
  ../../../../../../components/libraries/experimental_section_vars/nrf_section.h \
  ../../../../../../components/libraries/util/nordic_common.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\log\src\nrf_log_internal.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\log\src\nrf_log_internal.h \
  ../../../../../../components/libraries/log/nrf_log_types.h \
  ../../../../../../components/libraries/log/nrf_log_ctrl.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/ctype.h \

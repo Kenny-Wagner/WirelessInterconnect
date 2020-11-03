@@ -1,5 +1,5 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/nrfx_gpiote.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\modules\nrfx\drivers\src\nrfx_gpiote.c \
+ C:\Nordic_Semi\WirelessInterconnect\modules\nrfx\drivers\src\nrfx_gpiote.c \
  ../../../../../../modules/nrfx/nrfx.h \
  ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \
  ../../../../../../modules/nrfx/drivers/nrfx_common.h \
