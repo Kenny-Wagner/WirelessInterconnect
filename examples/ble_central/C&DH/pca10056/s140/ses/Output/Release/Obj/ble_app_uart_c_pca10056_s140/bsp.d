@@ -1,6 +1,6 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/bsp.o: \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\bsp\bsp.c \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\bsp\bsp.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\bsp\bsp.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\bsp\bsp.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
  ../../../../../../components/boards/boards.h \
@@ -54,10 +54,10 @@ Output/Release/Obj/ble_app_uart_c_pca10056_s140/bsp.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
  ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
- ../../../../../../components/boards/pca10056.h \
+ ../../../../../../components/boards/pca10100.h \
  ../../../../../../components/libraries/button/app_button.h \
  ../../../../../../components/libraries/util/app_error.h \
- C:\Nordic_Semi\nRF5_SDK_17.0.0_9d13099\components\libraries\bsp\bsp_config.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\bsp\bsp_config.h \
  ../../../../../../components/libraries/timer/app_timer.h \
  ../../../../../../components/libraries/log/nrf_log_instance.h \
  ../../../../../../components/libraries/experimental_section_vars/nrf_section.h \

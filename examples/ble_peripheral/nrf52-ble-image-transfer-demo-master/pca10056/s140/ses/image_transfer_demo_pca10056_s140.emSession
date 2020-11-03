@@ -29,6 +29,7 @@
   <ProjectSessionItem path="image_transfer_demo_pca10056_s140;image_transfer_demo_pca10056_s140"/>
   <ProjectSessionItem path="image_transfer_demo_pca10056_s140;image_transfer_demo_pca10056_s140;Application"/>
   <ProjectSessionItem path="image_transfer_demo_pca10056_s140;image_transfer_demo_pca10056_s140;None"/>
+  <ProjectSessionItem path="image_transfer_demo_pca10056_s140;image_transfer_demo_pca10056_s140;nRF_BLE_Services"/>
   <ProjectSessionItem path="image_transfer_demo_pca10056_s140;image_transfer_demo_pca10056_s140;nRF_Drivers"/>
   <ProjectSessionItem path="image_transfer_demo_pca10056_s140;image_transfer_demo_pca10056_s140;nRF_Libraries"/>
   <ProjectSessionItem path="image_transfer_demo_pca10056_s140;image_transfer_demo_pca10056_s140;nRF_Log"/>
@@ -71,8 +72,12 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="41" y="74" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="41" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="76" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="237" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="387" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="224" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../ble_image_transfer_service.c" selected="0" top="201" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/ble_peripheral/nrf52-ble-image-transfer-demo-master/ble_image_transfer_service.c" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/s140/headers/ble.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="165" useTextEdit="1" openedFrom="C:/Nordic_Semi/WirelessInterconnect/examples/ble_peripheral/nrf52-ble-image-transfer-demo-master/main.c" useBinaryEdit="0" left="0" path="../../../ble_image_transfer_service.h" selected="0" top="124" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../arducam_mini_2mp/ArduCAM.c" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="175" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../arducam_mini_2mp/ArducamMini2MP.c" selected="0" top="152" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="image_transfer_demo_pca10056_s140" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Nordic_Semiconductor/nRF5_SDK_15.2.0/components/libraries/ringbuf" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

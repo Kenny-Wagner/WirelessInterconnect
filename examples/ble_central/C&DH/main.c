@@ -75,8 +75,8 @@
 #define APP_BLE_CONN_CFG_TAG    1                                       /**< Tag that refers to the BLE stack configuration set with @ref sd_ble_cfg_set. The default tag is @ref BLE_CONN_CFG_TAG_DEFAULT. */
 #define APP_BLE_OBSERVER_PRIO   3                                       /**< BLE observer priority of the application. There is no need to modify this value. */
 
-#define UART_TX_BUF_SIZE        4096                                     /**< UART TX buffer size. Must be power of 2 */
-#define UART_RX_BUF_SIZE        256                                     /**< UART RX buffer size. Must be power of 2*/
+#define UART_TX_BUF_SIZE        8192                                     /**< UART TX buffer size. Must be power of 2 */
+#define UART_RX_BUF_SIZE        8192                                     /**< UART RX buffer size. Must be power of 2*/
 
 #define NUS_SERVICE_UUID_TYPE   BLE_UUID_TYPE_VENDOR_BEGIN              /**< UUID type for the Nordic UART Service (vendor specific). */
 
@@ -556,7 +556,7 @@ static void uart_init(void)
         .tx_pin_no    = TX_PIN_NUMBER,
         .rts_pin_no   = RTS_PIN_NUMBER,
         .cts_pin_no   = CTS_PIN_NUMBER,
-        .flow_control = APP_UART_FLOW_CONTROL_DISABLED,
+        .flow_control = APP_UART_FLOW_CONTROL_ENABLED,
         .use_parity   = false,
         .baud_rate    = UART_BAUDRATE_BAUDRATE_Baud1M
     };
