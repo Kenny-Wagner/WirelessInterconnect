@@ -62,6 +62,8 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
+#include "packet_error_rate.h"
+
 //Adding nrf_drv_uart I think
 #if defined (UART_PRESENT)
 #include "nrf_uart.h"
@@ -82,6 +84,9 @@
 
 #define ECHOBACK_BLE_UART_DATA  0                                       /**< Echo the UART data that is received over the Nordic UART Service (NUS) back to the sender. */
 
+#define RSSI_SHOW_EVERY_COUNT 50
+static uint8_t m_rssi_count = 0;
+
 
 BLE_NUS_C_DEF(m_ble_nus_c);                                             /**< BLE Nordic UART Service (NUS) client instance. */
 NRF_BLE_GATT_DEF(m_gatt);                                               /**< GATT module instance. */
@@ -93,7 +98,7 @@ NRF_BLE_GQ_DEF(m_ble_gatt_queue,                                        /**< BLE
 
 
 static uint16_t m_ble_nus_max_data_len = BLE_GATT_ATT_MTU_DEFAULT - OPCODE_LENGTH - HANDLE_LENGTH; /**< Maximum length of data (in bytes) that can be transmitted to the peer by the Nordic UART service module. */
-
+static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        /**< Handle of the current connection. */
 /**@brief NUS UUID. */
 static ble_uuid_t const m_nus_uuid =
 {
@@ -338,7 +343,7 @@ static void ble_nus_c_evt_handler(ble_nus_c_t * p_ble_nus_c, ble_nus_c_evt_t con
 
         case BLE_NUS_C_EVT_NUS_TX_EVT:
             ble_nus_chars_received_uart_print(p_ble_nus_evt->p_data, p_ble_nus_evt->data_len);
-            NRF_LOG_INFO("Recieving data from EPS. Transfering packets over UART.");
+            //NRF_LOG_INFO("Recieving data from EPS. Transfering packets over UART.");
             break;
 
         case BLE_NUS_C_EVT_DISCONNECTED:
@@ -399,9 +404,19 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             err_code = bsp_indication_set(BSP_INDICATE_CONNECTED);
             APP_ERROR_CHECK(err_code);
 
+            m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
+
             // start discovery of services. The NUS Client waits for a discovery result
             err_code = ble_db_discovery_start(&m_db_disc, p_ble_evt->evt.gap_evt.conn_handle);
             APP_ERROR_CHECK(err_code);
+
+            packet_error_rate_reset_counter(); //Reset counter for PER testing
+            packet_error_rate_detect_enable(); //Detect if enabled
+            
+        
+            //err_code = sd_ble_gap_qos_start(BLE_GAP_QOS_RSSI ,m_conn_handle);
+            //APP_ERROR_CHECK(err_code);
+
             break;
 
         case BLE_GAP_EVT_DISCONNECTED:
@@ -409,6 +424,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             NRF_LOG_INFO("Disconnected. conn_handle: 0x%x, reason: 0x%x",
                          p_gap_evt->conn_handle,
                          p_gap_evt->params.disconnected.reason);
+                         packet_error_rate_detect_disable(); //PER Testing
             break;
 
         case BLE_GAP_EVT_TIMEOUT:
@@ -459,6 +475,17 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             APP_ERROR_CHECK(err_code);
             break;
 
+        case BLE_GAP_EVT_RSSI_CHANGED:
+                if (m_rssi_count % RSSI_SHOW_EVERY_COUNT == 0)
+                {
+                        packet_error_rate_timeout_handler();
+                        NRF_LOG_INFO("RSSI = %d (dBm), PSR = %03d%%", p_ble_evt->evt.gap_evt.params.rssi_changed.rssi, get_packet_success_rate());
+                        printf("RSSI = %d (dBm), Packet Success Rate = %03d%%\n", p_ble_evt->evt.gap_evt.params.rssi_changed.rssi, get_packet_success_rate());
+                }
+                m_rssi_count++;
+                m_rssi_count = m_rssi_count % RSSI_SHOW_EVERY_COUNT;
+            break;
+
         default:
             break;
     }
@@ -498,7 +525,7 @@ void gatt_evt_handler(nrf_ble_gatt_t * p_gatt, nrf_ble_gatt_evt_t const * p_evt)
     {
         NRF_LOG_INFO("ATT MTU exchange completed.");
 
-        m_ble_nus_max_data_len = p_evt->params.att_mtu_effective - OPCODE_LENGTH - HANDLE_LENGTH;
+        m_ble_nus_max_data_len = 244;
         NRF_LOG_INFO("Ble NUS max data length set to 0x%X(%d)", m_ble_nus_max_data_len, m_ble_nus_max_data_len);
     }
 }

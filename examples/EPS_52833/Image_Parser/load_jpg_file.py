@@ -53,7 +53,7 @@ file_crc32      =   "global"
 
 def main():
 
-    DEFAULT_MTU_LEN             =   20
+    DEFAULT_MTU_LEN             =   247
 
     # print ("Number of argument = ", len(sys.argv))
     len_argument = len(sys.argv)
@@ -80,7 +80,7 @@ def main():
 
     # Open the Serial Port
     try:
-        ser = serial.Serial('COM9', 1000000, timeout=30) #Make sure to change COM port to EPS's COM port
+        ser = serial.Serial('COM10', 1000000, timeout=30) #Make sure to change COM port to EPS's COM port
     except:
         print ("Make sure COM port is correct")
         sys.exit(0)
