@@ -1,5 +1,5 @@
 Output/Release/Obj/ble_app_uart_c_pca10100_s122/main.o: \
- C:\Nordic_Semi\WirelessInterconnect-main\examples\ble_central\C&DH_52833_Fixed\main.c \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central\C&DH_52833\main.c \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdio.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/__crossworks.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
@@ -19,30 +19,31 @@ Output/Release/Obj/ble_app_uart_c_pca10100_s122/main.o: \
  ../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
- ../../../../../../components/softdevice/s122/headers/nrf_error.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_error.h \
  ../../../../../../components/libraries/util/nordic_common.h \
  ../../../../../../components/libraries/util/app_error_weak.h \
  ../../../../../../components/libraries/uart/app_uart.h \
  ../../../../../../components/libraries/util/app_util_platform.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
- ../../../../../../components/softdevice/s122/headers/nrf_soc.h \
- ../../../../../../components/softdevice/s122/headers/nrf_svc.h \
- ../../../../../../components/softdevice/s122/headers/nrf_error.h \
- ../../../../../../components/softdevice/s122/headers/nrf_error_soc.h \
- ../../../../../../components/softdevice/s122/headers/nrf_nvic.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_error.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_error_soc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_nvic.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
  ../../../../../../components/libraries/util/app_error.h \
  ../../../../../../components/ble/ble_db_discovery/ble_db_discovery.h \
- ../../../../../../components/softdevice/s122/headers/ble.h \
- ../../../../../../components/softdevice/s122/headers/ble_err.h \
- ../../../../../../components/softdevice/s122/headers/ble_gap.h \
- ../../../../../../components/softdevice/s122/headers/ble_hci.h \
- ../../../../../../components/softdevice/s122/headers/ble_ranges.h \
- ../../../../../../components/softdevice/s122/headers/ble_types.h \
- ../../../../../../components/softdevice/s122/headers/ble_gatt.h \
- ../../../../../../components/softdevice/s122/headers/ble_gattc.h \
- ../../../../../../components/softdevice/s122/headers/ble_gatts.h \
- ../../../../../../components/softdevice/s122/headers/ble_gattc.h \
+ ../../../../../../components/softdevice/s140/headers/ble.h \
+ ../../../../../../components/softdevice/s140/headers/ble_err.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_hci.h \
+ ../../../../../../components/softdevice/s140/headers/ble_ranges.h \
+ ../../../../../../components/softdevice/s140/headers/ble_types.h \
+ ../../../../../../components/softdevice/s140/headers/ble_l2cap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatt.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gattc.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatts.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gattc.h \
  ../../../../../../components/ble/common/ble_gatt_db.h \
  ../config/sdk_config.h \
  ../../../../../../components/ble/nrf_ble_gq/nrf_ble_gq.h \
@@ -51,8 +52,8 @@ Output/Release/Obj/ble_app_uart_c_pca10100_s122/main.o: \
  ../../../../../../components/libraries/util/sdk_os.h \
  ../../../../../../components/libraries/util/app_util.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stddef.h \
- ../../../../../../components/softdevice/s122/headers/nrf52/nrf_mbr.h \
- ../../../../../../components/softdevice/s122/headers/nrf_svc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf52/nrf_mbr.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/memobj/nrf_memobj.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdlib.h \
@@ -85,19 +86,19 @@ Output/Release/Obj/ble_app_uart_c_pca10100_s122/main.o: \
  ../../../../../../modules/nrfx/soc/nrfx_coredep.h \
  ../../../../../../modules/nrfx/soc/nrfx_atomic.h \
  ../../../../../../components/libraries/util/sdk_resources.h \
- ../../../../../../components/softdevice/s122/headers/nrf_sd_def.h \
- ../../../../../../components/softdevice/s122/headers/nrf_soc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
  ../../../../../../components/boards/pca10100.h \
  ../../../../../../components/libraries/button/app_button.h \
- ../../../../../../components/softdevice/s122/headers/ble_gap.h \
- ../../../../../../components/softdevice/s122/headers/ble_hci.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_hci.h \
  ../../../../../../components/softdevice/common/nrf_sdh.h \
  ../../../../../../components/softdevice/common/nrf_sdh_soc.h \
  ../../../../../../components/ble/ble_services/ble_nus_c/ble_nus_c.h \
- ../../../../../../components/softdevice/s122/headers/ble_gatt.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatt.h \
  ../../../../../../components/ble/common/ble_srv_common.h \
- ../../../../../../components/softdevice/s122/headers/ble_types.h \
+ ../../../../../../components/softdevice/s140/headers/ble_types.h \
  ../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.h \
  ../../../../../../components/libraries/pwr_mgmt/nrf_pwr_mgmt.h \
  ../../../../../../components/ble/nrf_ble_scan/nrf_ble_scan.h \

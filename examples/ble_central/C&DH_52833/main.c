@@ -77,7 +77,7 @@
 #define APP_BLE_CONN_CFG_TAG    1                                       /**< Tag that refers to the BLE stack configuration set with @ref sd_ble_cfg_set. The default tag is @ref BLE_CONN_CFG_TAG_DEFAULT. */
 #define APP_BLE_OBSERVER_PRIO   3                                       /**< BLE observer priority of the application. There is no need to modify this value. */
 
-#define UART_TX_BUF_SIZE        4096                                     /**< UART TX buffer size. Must be power of 2 */
+#define UART_TX_BUF_SIZE        8192                                     /**< UART TX buffer size. Must be power of 2 */
 #define UART_RX_BUF_SIZE        512                                     /**< UART RX buffer size. Must be power of 2*/
 
 #define NUS_SERVICE_UUID_TYPE   BLE_UUID_TYPE_VENDOR_BEGIN              /**< UUID type for the Nordic UART Service (vendor specific). */
@@ -98,7 +98,7 @@ NRF_BLE_GQ_DEF(m_ble_gatt_queue,                                        /**< BLE
 
 
 static uint16_t m_ble_nus_max_data_len = BLE_GATT_ATT_MTU_DEFAULT - OPCODE_LENGTH - HANDLE_LENGTH; /**< Maximum length of data (in bytes) that can be transmitted to the peer by the Nordic UART service module. */
-static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                        /**< Handle of the current connection. */
+
 /**@brief NUS UUID. */
 static ble_uuid_t const m_nus_uuid =
 {
@@ -395,6 +395,8 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
     ret_code_t            err_code;
     ble_gap_evt_t const * p_gap_evt = &p_ble_evt->evt.gap_evt;
 
+     
+
     switch (p_ble_evt->header.evt_id)
     {
         case BLE_GAP_EVT_CONNECTED:
@@ -404,7 +406,7 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
             err_code = bsp_indication_set(BSP_INDICATE_CONNECTED);
             APP_ERROR_CHECK(err_code);
 
-            m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
+           
 
             // start discovery of services. The NUS Client waits for a discovery result
             err_code = ble_db_discovery_start(&m_db_disc, p_ble_evt->evt.gap_evt.conn_handle);
@@ -412,10 +414,9 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
 
             packet_error_rate_reset_counter(); //Reset counter for PER testing
             packet_error_rate_detect_enable(); //Detect if enabled
-            
-        
-            //err_code = sd_ble_gap_qos_start(BLE_GAP_QOS_RSSI ,m_conn_handle);
-            //APP_ERROR_CHECK(err_code);
+
+            err_code = sd_ble_gap_rssi_start(p_ble_evt->evt.gap_evt.conn_handle,0,0);
+            APP_ERROR_CHECK(err_code);
 
             break;
 
@@ -480,7 +481,6 @@ static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
                 {
                         packet_error_rate_timeout_handler();
                         NRF_LOG_INFO("RSSI = %d (dBm), PSR = %03d%%", p_ble_evt->evt.gap_evt.params.rssi_changed.rssi, get_packet_success_rate());
-                        printf("RSSI = %d (dBm), Packet Success Rate = %03d%%\n", p_ble_evt->evt.gap_evt.params.rssi_changed.rssi, get_packet_success_rate());
                 }
                 m_rssi_count++;
                 m_rssi_count = m_rssi_count % RSSI_SHOW_EVERY_COUNT;

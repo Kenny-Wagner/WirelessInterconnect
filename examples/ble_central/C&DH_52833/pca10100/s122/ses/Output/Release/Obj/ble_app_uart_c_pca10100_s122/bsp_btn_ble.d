@@ -1,17 +1,18 @@
 Output/Release/Obj/ble_app_uart_c_pca10100_s122/bsp_btn_ble.o: \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\bsp\bsp_btn_ble.c \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\bsp\bsp_btn_ble.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\bsp\bsp_btn_ble.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\bsp\bsp_btn_ble.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
- ../../../../../../components/softdevice/s122/headers/ble.h \
- ../../../../../../components/softdevice/s122/headers/nrf_svc.h \
- ../../../../../../components/softdevice/s122/headers/nrf_error.h \
- ../../../../../../components/softdevice/s122/headers/ble_err.h \
- ../../../../../../components/softdevice/s122/headers/ble_gap.h \
- ../../../../../../components/softdevice/s122/headers/ble_hci.h \
- ../../../../../../components/softdevice/s122/headers/ble_ranges.h \
- ../../../../../../components/softdevice/s122/headers/ble_types.h \
- ../../../../../../components/softdevice/s122/headers/ble_gatt.h \
- ../../../../../../components/softdevice/s122/headers/ble_gattc.h \
+ ../../../../../../components/softdevice/s140/headers/ble.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_error.h \
+ ../../../../../../components/softdevice/s140/headers/ble_err.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_hci.h \
+ ../../../../../../components/softdevice/s140/headers/ble_ranges.h \
+ ../../../../../../components/softdevice/s140/headers/ble_types.h \
+ ../../../../../../components/softdevice/s140/headers/ble_l2cap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatt.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gattc.h \
  ../../../../../../modules/nrfx/mdk/nrf.h \
  ../../../../../../modules/nrfx/mdk/nrf52833.h \
  ../../../../../../components/toolchain/cmsis/include/core_cm4.h \
@@ -24,8 +25,8 @@ Output/Release/Obj/ble_app_uart_c_pca10100_s122/bsp_btn_ble.o: \
  ../../../../../../modules/nrfx/mdk/nrf52_to_nrf52833.h \
  ../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
- ../../../../../../components/softdevice/s122/headers/ble_gatts.h \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\bsp\bsp.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatts.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\bsp\bsp.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
  ../../../../../../components/boards/boards.h \
  ../../../../../../modules/nrfx/hal/nrf_gpio.h \
@@ -44,25 +45,25 @@ Output/Release/Obj/ble_app_uart_c_pca10100_s122/bsp_btn_ble.o: \
  ../../../../../../components/libraries/util/app_util.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../../../components/libraries/util/nordic_common.h \
- ../../../../../../components/softdevice/s122/headers/nrf52/nrf_mbr.h \
- ../../../../../../components/softdevice/s122/headers/nrf_svc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf52/nrf_mbr.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/nordic_common.h \
  ../../../../../../components/libraries/util/app_util_platform.h \
- ../../../../../../components/softdevice/s122/headers/nrf_soc.h \
- ../../../../../../components/softdevice/s122/headers/nrf_error_soc.h \
- ../../../../../../components/softdevice/s122/headers/nrf_nvic.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_error_soc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_nvic.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
  ../../../../../../components/libraries/util/app_error.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdio.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
- ../../../../../../components/softdevice/s122/headers/nrf_error.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_error.h \
  ../../../../../../components/libraries/util/app_error_weak.h \
  ../../../../../../modules/nrfx/soc/nrfx_coredep.h \
  ../../../../../../modules/nrfx/soc/nrfx_atomic.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
  ../../../../../../components/libraries/util/sdk_resources.h \
- ../../../../../../components/softdevice/s122/headers/nrf_sd_def.h \
- ../../../../../../components/softdevice/s122/headers/nrf_soc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_sd_def.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
  ../../../../../../components/boards/pca10100.h \
  ../../../../../../components/libraries/button/app_button.h \

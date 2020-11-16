@@ -1,5 +1,5 @@
 Output/Release/Obj/ble_app_uart_c_pca10100_s122/nrf_ble_scan.o: \
- C:\Nordic_Semi\WirelessInterconnect-main\components\ble\nrf_ble_scan\nrf_ble_scan.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\ble\nrf_ble_scan\nrf_ble_scan.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
@@ -10,7 +10,7 @@ Output/Release/Obj/ble_app_uart_c_pca10100_s122/nrf_ble_scan.o: \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../../../components/libraries/util/sdk_os.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
- ../../../../../../components/softdevice/s122/headers/nrf_error.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_error.h \
  ../../../../../../components/libraries/util/app_util.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stddef.h \
  ../../../../../../modules/nrfx/mdk/nrf.h \
@@ -25,24 +25,25 @@ Output/Release/Obj/ble_app_uart_c_pca10100_s122/nrf_ble_scan.o: \
  ../../../../../../modules/nrfx/mdk/nrf52_to_nrf52833.h \
  ../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
- ../../../../../../components/softdevice/s122/headers/nrf52/nrf_mbr.h \
- ../../../../../../components/softdevice/s122/headers/nrf_svc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf52/nrf_mbr.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdlib.h \
- C:\Nordic_Semi\WirelessInterconnect-main\components\ble\nrf_ble_scan\nrf_ble_scan.h \
- ../../../../../../components/softdevice/s122/headers/ble.h \
- ../../../../../../components/softdevice/s122/headers/nrf_svc.h \
- ../../../../../../components/softdevice/s122/headers/nrf_error.h \
- ../../../../../../components/softdevice/s122/headers/ble_err.h \
- ../../../../../../components/softdevice/s122/headers/ble_gap.h \
- ../../../../../../components/softdevice/s122/headers/ble_hci.h \
- ../../../../../../components/softdevice/s122/headers/ble_ranges.h \
- ../../../../../../components/softdevice/s122/headers/ble_types.h \
- ../../../../../../components/softdevice/s122/headers/ble_gatt.h \
- ../../../../../../components/softdevice/s122/headers/ble_gattc.h \
- ../../../../../../components/softdevice/s122/headers/ble_gatts.h \
- ../../../../../../components/softdevice/s122/headers/ble_gap.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\ble\nrf_ble_scan\nrf_ble_scan.h \
+ ../../../../../../components/softdevice/s140/headers/ble.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_error.h \
+ ../../../../../../components/softdevice/s140/headers/ble_err.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_hci.h \
+ ../../../../../../components/softdevice/s140/headers/ble_ranges.h \
+ ../../../../../../components/softdevice/s140/headers/ble_types.h \
+ ../../../../../../components/softdevice/s140/headers/ble_l2cap.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatt.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gattc.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gatts.h \
+ ../../../../../../components/softdevice/s140/headers/ble_gap.h \
  ../../../../../../components/libraries/util/app_util.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
  ../../../../../../components/libraries/util/app_error.h \

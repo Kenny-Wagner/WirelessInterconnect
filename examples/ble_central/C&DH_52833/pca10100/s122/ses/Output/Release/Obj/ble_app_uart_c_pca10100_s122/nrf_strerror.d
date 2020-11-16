@@ -1,5 +1,5 @@
 Output/Release/Obj/ble_app_uart_c_pca10100_s122/nrf_strerror.o: \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\strerror\nrf_strerror.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\strerror\nrf_strerror.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
@@ -10,7 +10,7 @@ Output/Release/Obj/ble_app_uart_c_pca10100_s122/nrf_strerror.o: \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../../../components/libraries/util/sdk_os.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
- ../../../../../../components/softdevice/s122/headers/nrf_error.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_error.h \
  ../../../../../../components/libraries/util/app_util.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stddef.h \
  ../../../../../../modules/nrfx/mdk/nrf.h \
@@ -25,9 +25,9 @@ Output/Release/Obj/ble_app_uart_c_pca10100_s122/nrf_strerror.o: \
  ../../../../../../modules/nrfx/mdk/nrf52_to_nrf52833.h \
  ../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
- ../../../../../../components/softdevice/s122/headers/nrf52/nrf_mbr.h \
- ../../../../../../components/softdevice/s122/headers/nrf_svc.h \
+ ../../../../../../components/softdevice/s140/headers/nrf52/nrf_mbr.h \
+ ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\strerror\nrf_strerror.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\strerror\nrf_strerror.h \
  ../../../../../../components/libraries/util/sdk_errors.h
