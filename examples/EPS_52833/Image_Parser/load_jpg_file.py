@@ -80,7 +80,11 @@ def main():
 
     # Open the Serial Port
     try:
+<<<<<<< Updated upstream
         ser = serial.Serial('COM10', 1000000, timeout=30) #Make sure to change COM port to EPS's COM port
+=======
+        ser = serial.Serial('COM7', 1000000, timeout=30) #Make sure to change COM port to EPS's COM port
+>>>>>>> Stashed changes
     except:
         print ("Make sure COM port is correct")
         sys.exit(0)

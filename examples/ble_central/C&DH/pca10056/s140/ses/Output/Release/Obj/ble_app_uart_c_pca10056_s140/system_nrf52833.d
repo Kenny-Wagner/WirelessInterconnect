@@ -1,7 +1,7 @@
 Output/Release/Obj/ble_app_uart_c_pca10056_s140/system_nrf52833.o: \
  C:\Nordic_Semi\WirelessInterconnect\modules\nrfx\mdk\system_nrf52833.c \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stdint.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stdbool.h \
  C:\Nordic_Semi\WirelessInterconnect\modules\nrfx\mdk\nrf.h \
  C:\Nordic_Semi\WirelessInterconnect\modules\nrfx\mdk\nrf52840.h \
  ../../../../../../components/toolchain/cmsis/include/core_cm4.h \
