@@ -80,11 +80,7 @@ def main():
 
     # Open the Serial Port
     try:
-<<<<<<< Updated upstream
-        ser = serial.Serial('COM10', 1000000, timeout=30) #Make sure to change COM port to EPS's COM port
-=======
         ser = serial.Serial('COM7', 1000000, timeout=30) #Make sure to change COM port to EPS's COM port
->>>>>>> Stashed changes
     except:
         print ("Make sure COM port is correct")
         sys.exit(0)
@@ -127,6 +123,8 @@ def main():
     length = mtu_len
     data_index = 0
     offset_addr = 0
+
+    time_start = time.perf_counter()
 
     while (data_index < filesize):
 
@@ -175,13 +173,19 @@ def main():
 
 
             data_index = data_index + length
+            
 
             if (offset_addr+data_index >= filesize):
-              sys.exit(0)
-
+                time_stop = time.perf_counter()
+                runtime = time_stop - time_start
+                print("Time to send:")
+                print(runtime)
+                sys.exit(0)
+              
 
     binary_file.close()
 
-
+    
+    
 if __name__=="__main__":
   main()

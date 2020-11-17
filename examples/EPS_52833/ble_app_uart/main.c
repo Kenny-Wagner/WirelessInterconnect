@@ -479,10 +479,10 @@ static void nus_data_handler(ble_nus_t * p_nus, uint8_t const * p_data, uint16_t
         // Take picture
         case APP_CMD_SEND_PING:
                 m_new_command_received = p_data[0];
-
+                
                 NRF_LOG_INFO("APP_CMD_SEND_PING");
                 serial_uart_response(PAYLOAD_FILE_OPCODE_PING);
-
+                
                 break;
 
         case APP_CMD_SEND_BUFFER_REQ:

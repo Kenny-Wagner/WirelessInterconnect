@@ -1,9 +1,9 @@
 Output/Release/Obj/ble_app_uart_pca10100_s140/ble_link_ctx_manager.o: \
- C:\Nordic_Semi\WirelessInterconnect-main\components\ble\ble_link_ctx_manager\ble_link_ctx_manager.c \
- C:\Nordic_Semi\WirelessInterconnect-main\components\ble\ble_link_ctx_manager\ble_link_ctx_manager.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\ble\ble_link_ctx_manager\ble_link_ctx_manager.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\ble\ble_link_ctx_manager\ble_link_ctx_manager.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stdint.h \
  ../../../../../../components/ble/common/ble_conn_state.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stdbool.h \
  ../../../../../../components/softdevice/s140/headers/ble.h \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/softdevice/s140/headers/nrf_error.h \
@@ -31,8 +31,8 @@ Output/Release/Obj/ble_app_uart_pca10100_s140/ble_link_ctx_manager.o: \
  ../../../../../../components/softdevice/s140/headers/ble_gap.h \
  ../../../../../../components/libraries/atomic/nrf_atomic.h \
  ../../../../../../components/libraries/util/sdk_common.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/string.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/__crossworks.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/string.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/__crossworks.h \
  ../config/sdk_config.h \
  ../../../../../../components/libraries/util/nordic_common.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
@@ -40,7 +40,7 @@ Output/Release/Obj/ble_app_uart_pca10100_s140/ble_link_ctx_manager.o: \
  ../../../../../../components/libraries/util/sdk_errors.h \
  ../../../../../../components/softdevice/s140/headers/nrf_error.h \
  ../../../../../../components/libraries/util/app_util.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stddef.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stddef.h \
  ../../../../../../components/softdevice/s140/headers/nrf52/nrf_mbr.h \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \

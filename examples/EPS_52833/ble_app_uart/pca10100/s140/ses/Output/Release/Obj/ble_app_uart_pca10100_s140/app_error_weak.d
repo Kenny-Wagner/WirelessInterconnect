@@ -1,10 +1,10 @@
 Output/Release/Obj/ble_app_uart_pca10100_s140/app_error_weak.o: \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\util\app_error_weak.c \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\util\app_error.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdio.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/__crossworks.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\util\app_error_weak.c \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\util\app_error.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stdint.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stdio.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/__crossworks.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stdbool.h \
  ../../../../../../modules/nrfx/mdk/nrf.h \
  ../../../../../../modules/nrfx/mdk/nrf52833.h \
  ../../../../../../components/toolchain/cmsis/include/core_cm4.h \
@@ -17,20 +17,20 @@ Output/Release/Obj/ble_app_uart_pca10100_s140/app_error_weak.o: \
  ../../../../../../modules/nrfx/mdk/nrf52_to_nrf52833.h \
  ../../../../../../modules/nrfx/mdk/nrf51_to_nrf52.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\util\sdk_errors.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\util\sdk_errors.h \
  ../../../../../../components/softdevice/s140/headers/nrf_error.h \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\util\nordic_common.h \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\util\app_error_weak.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\util\nordic_common.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\util\app_error_weak.h \
  ../../../../../../components/libraries/log/nrf_log.h \
  ../../../../../../components/libraries/util/sdk_common.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/string.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/string.h \
  ../config/sdk_config.h \
  ../../../../../../components/libraries/util/nordic_common.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../../../components/libraries/util/sdk_os.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
  ../../../../../../components/libraries/util/app_util.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stddef.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stddef.h \
  ../../../../../../components/softdevice/s140/headers/nrf52/nrf_mbr.h \
  ../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
@@ -48,7 +48,7 @@ Output/Release/Obj/ble_app_uart_pca10100_s140/app_error_weak.o: \
  ../../../../../../components/libraries/log/src/nrf_log_ctrl_internal.h \
  ../../../../../../components/libraries/log/nrf_log_backend_interface.h \
  ../../../../../../components/libraries/memobj/nrf_memobj.h \
- C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdlib.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10a/include/stdlib.h \
  ../../../../../../components/libraries/balloc/nrf_balloc.h \
  ../../../../../../components/libraries/util/app_util_platform.h \
  ../../../../../../components/softdevice/s140/headers/nrf_soc.h \
@@ -57,7 +57,7 @@ Output/Release/Obj/ble_app_uart_pca10100_s140/app_error_weak.o: \
  ../../../../../../components/softdevice/s140/headers/nrf_error_soc.h \
  ../../../../../../components/softdevice/s140/headers/nrf_nvic.h \
  ../../../../../../components/libraries/util/app_error.h \
- C:\Nordic_Semi\WirelessInterconnect-main\components\libraries\util\app_util_platform.h \
+ C:\Nordic_Semi\WirelessInterconnect\components\libraries\util\app_util_platform.h \
  ../../../../../../components/softdevice/s140/headers/nrf_sdm.h \
  ../../../../../../components/softdevice/s140/headers/nrf_error_sdm.h \
  ../../../../../../components/softdevice/s140/headers/nrf_soc.h
