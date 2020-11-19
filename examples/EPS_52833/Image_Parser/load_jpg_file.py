@@ -19,7 +19,7 @@ jpeg_signatures = [
 
 def getSize(fileobject):
     fileobject.seek(0,2) # move the cursor to the end of the file
-    size = fileobject.tell()
+    size: int = fileobject.tell()
     return size
 
 #def check_file_jpg(filename):
@@ -46,17 +46,17 @@ PAYLOAD_JPG_OPCODE_COMPLETE     = b'\xA6'
 PAYLOAD_JPG_OPCODE_COMPLETE_ACK = b'\xA7'
 PAYLOAD_JPG_OPCODE_DATA_RSP_LAST  = b'\xA8'
 
-mtu_length      =   "global"
-file_offset     =   "global"
-file_offset_len =   "global"
-file_crc32      =   "global"
+mtu_length: int      =   "global"
+file_offset: int     =   "global"
+file_offset_len: int =   "global"
+file_crc32: int      =   "global"
 
 def main():
 
     DEFAULT_MTU_LEN             =   247
 
     # print ("Number of argument = ", len(sys.argv))
-    len_argument = len(sys.argv)
+    len_argument: int = len(sys.argv)
     filesize = 0
     if (len_argument != 2):
       print ("")
@@ -69,9 +69,9 @@ def main():
 
     # Open the JPG file
     try:
-        binary_file = open(sys.argv[1], 'rb') #'rb' = read only in binary format
-        binary_data = binary_file.read()
-        binary_crc = binascii.crc32(binary_data)
+        binary_file: int = open(sys.argv[1], 'rb') #'rb' = read only in binary format
+        binary_data: int = binary_file.read()
+        binary_crc: int = binascii.crc32(binary_data)
         filesize = getSize(binary_file)
         print("filesize and CRC", filesize, binary_crc)
     except:
@@ -86,7 +86,7 @@ def main():
         sys.exit(0)
 
     print ("Waiting to get the PING Message from DK Board [Timeout = 30 sec]")
-    payload_len = 3
+    payload_len: int = 3
     ping_request = ser.read(3)
 
     print (ping_request)
@@ -118,13 +118,11 @@ def main():
     #Send File CRC32
     ser.write(binary_crc.to_bytes(4, byteorder='little', signed=False))
 
-    data_index = 0
-    offset = 0
-    length = mtu_len
-    data_index = 0
-    offset_addr = 0
-
-    time_start = time.perf_counter()
+    data_index: int = 0
+    offset: int = 0
+    length: int = mtu_len
+    offset_addr: int = 0
+    total_time:float = 0
 
     while (data_index < filesize):
 
@@ -150,6 +148,7 @@ def main():
         data_index = 0
         offset = offset_addr
         length = mtu_len
+        
 
         while (data_index < request_length):
 
@@ -157,6 +156,8 @@ def main():
                 length = request_length - data_index
             else:
                 length = mtu_len
+
+            time_start: float = time.perf_counter()
 
             binary_file.seek(offset_addr+data_index, 0)
             print ("offset_addr: ", offset_addr, "data_index ", data_index, "length ", length, "filesize ", filesize)
@@ -173,13 +174,16 @@ def main():
 
 
             data_index = data_index + length
-            
+
+            time_stop: float = time.perf_counter()
+            runtime: float = time_stop - time_start
+            print("Time to send chunk:")
+            print(runtime)
+            total_time = total_time + runtime
 
             if (offset_addr+data_index >= filesize):
-                time_stop = time.perf_counter()
-                runtime = time_stop - time_start
-                print("Time to send:")
-                print(runtime)
+            
+                print("Total send time: ", total_time)
                 sys.exit(0)
               
 
