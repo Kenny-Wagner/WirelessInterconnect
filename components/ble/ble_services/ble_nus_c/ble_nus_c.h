@@ -100,12 +100,11 @@ NRF_SDH_BLE_OBSERVERS(_name ## _obs,                     \
                       BLE_NUS_C_BLE_OBSERVER_PRIO,       \
                       ble_nus_c_on_ble_evt, &_name, _cnt)
 
-#define NUS_BASE_UUID                   {{0x3E, 0xCA, 0xDC, 0x24, 0x0E, 0xE5, 0xA9, 0xE0, 0x93, 0xF3, 0xA3, 0xB5, 0x00, 0x00, 0x40, 0x6E}} /**< Used vendor-specific UUID. */
+#define NUS_BASE_UUID                   {{0x9E, 0xCA, 0xDC, 0x24, 0x0E, 0xE5, 0xA9, 0xE0, 0x93, 0xF3, 0xA3, 0xB5, 0x00, 0x00, 0x40, 0x6E}} /**< Used vendor-specific UUID. */
 
 #define BLE_UUID_NUS_SERVICE            0x0001                      /**< The UUID of the Nordic UART Service. */
 #define BLE_UUID_NUS_RX_CHARACTERISTIC  0x0002                      /**< The UUID of the RX Characteristic. */
 #define BLE_UUID_NUS_TX_CHARACTERISTIC  0x0003                      /**< The UUID of the TX Characteristic. */
-#define BLE_UUID_NUS_IMG_CHARACTERISTIC 0x0004                      /**< The UUID of the IMG Characteristic. */
 
 #define OPCODE_LENGTH 1
 #define HANDLE_LENGTH 2
@@ -133,8 +132,6 @@ typedef struct
     uint16_t nus_tx_handle;      /**< Handle of the NUS TX characteristic, as provided by a discovery. */
     uint16_t nus_tx_cccd_handle; /**< Handle of the CCCD of the NUS TX characteristic, as provided by a discovery. */
     uint16_t nus_rx_handle;      /**< Handle of the NUS RX characteristic, as provided by a discovery. */
-    uint16_t nus_IMG_handle;     // Testing adding IMG characteristic handle
-    uint16_t nus_IMG_cccd_handle; // Testing adding IMG characteristic cccd handle.
 } ble_nus_c_handles_t;
 
 /**@brief Structure containing the NUS event data received from the peer. */
@@ -233,9 +230,6 @@ void ble_nus_c_on_ble_evt(ble_evt_t const * p_ble_evt, void * p_context);
  * @retval  err_code 	Otherwise, this API propagates the error code returned by function @ref nrf_ble_gq_item_add.
  */
 uint32_t ble_nus_c_tx_notif_enable(ble_nus_c_t * p_ble_nus_c);
-
-//Testomg Adding function for requesting peer to start sending notification of IMG characteristic.
-uint32_t ble_nus_c_IMG_notif_enable(ble_nus_c_t * p_ble_nus_c);
 
 
 /**@brief Function for sending a string to the server.

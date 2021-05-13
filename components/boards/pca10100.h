@@ -84,8 +84,8 @@ extern "C" {
 #define BSP_BUTTON_2   BUTTON_3
 #define BSP_BUTTON_3   BUTTON_4
 
-#define RX_PIN_NUMBER  8
-#define TX_PIN_NUMBER  6
+#define RX_PIN_NUMBER  8//NRF_GPIO_PIN_MAP(1,9)
+#define TX_PIN_NUMBER  6//NRF_GPIO_PIN_MAP(0,17)
 #define CTS_PIN_NUMBER 7
 #define RTS_PIN_NUMBER 5
 #define HWFC           true
@@ -124,12 +124,12 @@ extern "C" {
 #define ARDUINO_SDA_PIN             26    // SDA signal pin
 #define ARDUINO_AREF_PIN            2     // Aref pin
 
-#define ARDUINO_13_PIN              NRF_GPIO_PIN_MAP(1, 23)  // Digital pin 13
-#define ARDUINO_12_PIN              NRF_GPIO_PIN_MAP(1, 22)  // Digital pin 12
-#define ARDUINO_11_PIN              NRF_GPIO_PIN_MAP(1, 21)  // Digital pin 11
-#define ARDUINO_10_PIN              NRF_GPIO_PIN_MAP(1, 20)  // Digital pin 10
-#define ARDUINO_9_PIN               NRF_GPIO_PIN_MAP(1, 19)  // Digital pin 9
-#define ARDUINO_8_PIN               NRF_GPIO_PIN_MAP(1, 17)  // Digital pin 8
+#define ARDUINO_13_PIN              NRF_GPIO_PIN_MAP(0, 23)  // Digital pin 13
+#define ARDUINO_12_PIN              NRF_GPIO_PIN_MAP(0, 22)  // Digital pin 12
+#define ARDUINO_11_PIN              NRF_GPIO_PIN_MAP(0, 21)  // Digital pin 11
+#define ARDUINO_10_PIN              NRF_GPIO_PIN_MAP(0, 20)  // Digital pin 10
+#define ARDUINO_9_PIN               NRF_GPIO_PIN_MAP(0, 19)  // Digital pin 9
+#define ARDUINO_8_PIN               NRF_GPIO_PIN_MAP(0, 17)  // Digital pin 8
 
 #define ARDUINO_7_PIN               NRF_GPIO_PIN_MAP(1, 8) // Digital pin 7
 #define ARDUINO_6_PIN               NRF_GPIO_PIN_MAP(1, 7) // Digital pin 6

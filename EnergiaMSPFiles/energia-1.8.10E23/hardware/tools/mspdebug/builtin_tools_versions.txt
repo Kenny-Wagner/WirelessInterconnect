@@ -1,0 +1,4 @@
+energia.mspdebug=0.24
+energia.mspdebug=0.24
+energia.mspdebug=0.24
+energia.mspdebug=0.24

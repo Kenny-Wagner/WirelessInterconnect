@@ -98,11 +98,6 @@ void ble_nus_c_on_db_disc_evt(ble_nus_c_t * p_ble_nus_c, ble_db_discovery_evt_t 
                     nus_c_evt.handles.nus_tx_handle = p_chars[i].characteristic.handle_value;
                     nus_c_evt.handles.nus_tx_cccd_handle = p_chars[i].cccd_handle;
                     break;
-                
-                case BLE_UUID_NUS_IMG_CHARACTERISTIC: // Testing adding IMG characteristic handle and cccd handle.
-                    nus_c_evt.handles.nus_IMG_handle = p_chars[i].characteristic.handle_value;
-                    nus_c_evt.handles.nus_IMG_cccd_handle = p_chars[i].cccd_handle;
-                    break;
 
                 default:
                     break;
@@ -165,7 +160,6 @@ uint32_t ble_nus_c_init(ble_nus_c_t * p_ble_nus_c, ble_nus_c_init_t * p_ble_nus_
     p_ble_nus_c->error_handler         = p_ble_nus_c_init->error_handler;
     p_ble_nus_c->handles.nus_tx_handle = BLE_GATT_HANDLE_INVALID;
     p_ble_nus_c->handles.nus_rx_handle = BLE_GATT_HANDLE_INVALID;
-    p_ble_nus_c->handles.nus_IMG_handle= BLE_GATT_HANDLE_INVALID;
     p_ble_nus_c->p_gatt_queue          = p_ble_nus_c_init->p_gatt_queue;
 
     return ble_db_discovery_evt_register(&uart_uuid);
@@ -237,31 +231,6 @@ static uint32_t cccd_configure(ble_nus_c_t * p_ble_nus_c, bool notification_enab
     return nrf_ble_gq_item_add(p_ble_nus_c->p_gatt_queue, &cccd_req, p_ble_nus_c->conn_handle);
 }
 
-//Testing Configuring cccd for IMG characteristic
-static uint32_t cccd_configure_IMG(ble_nus_c_t * p_ble_nus_c, bool notification_enable)
-{
-    nrf_ble_gq_req_t cccd_req;
-    uint8_t          cccd[BLE_CCCD_VALUE_LEN];
-    uint16_t         cccd_val = notification_enable ? BLE_GATT_HVX_NOTIFICATION : 0;
-
-    memset(&cccd_req, 0, sizeof(nrf_ble_gq_req_t));
-
-    cccd[0] = LSB_16(cccd_val);
-    cccd[1] = MSB_16(cccd_val);
-
-    cccd_req.type                        = NRF_BLE_GQ_REQ_GATTC_WRITE;
-    cccd_req.error_handler.cb            = gatt_error_handler;
-    cccd_req.error_handler.p_ctx         = p_ble_nus_c;
-    cccd_req.params.gattc_write.handle   = p_ble_nus_c->handles.nus_IMG_cccd_handle;
-    cccd_req.params.gattc_write.len      = BLE_CCCD_VALUE_LEN;
-    cccd_req.params.gattc_write.offset   = 0;
-    cccd_req.params.gattc_write.p_value  = cccd;
-    cccd_req.params.gattc_write.write_op = BLE_GATT_OP_WRITE_REQ;
-    cccd_req.params.gattc_write.flags    = BLE_GATT_EXEC_WRITE_FLAG_PREPARED_WRITE;
-
-    return nrf_ble_gq_item_add(p_ble_nus_c->p_gatt_queue, &cccd_req, p_ble_nus_c->conn_handle);
-}
-
 
 uint32_t ble_nus_c_tx_notif_enable(ble_nus_c_t * p_ble_nus_c)
 {
@@ -276,19 +245,6 @@ uint32_t ble_nus_c_tx_notif_enable(ble_nus_c_t * p_ble_nus_c)
     return cccd_configure(p_ble_nus_c, true);
 }
 
-//Testing enabling the IMG notification.
-uint32_t ble_nus_c_IMG_notif_enable(ble_nus_c_t * p_ble_nus_c)
-{
-    VERIFY_PARAM_NOT_NULL(p_ble_nus_c);
-
-    if ( (p_ble_nus_c->conn_handle == BLE_CONN_HANDLE_INVALID)
-       ||(p_ble_nus_c->handles.nus_IMG_cccd_handle == BLE_GATT_HANDLE_INVALID)
-       )
-    {
-        return NRF_ERROR_INVALID_STATE;
-    }
-    return cccd_configure_IMG(p_ble_nus_c, true); // Changed cccd_configure() to cccd_configure_IMG()
-}
 
 uint32_t ble_nus_c_string_send(ble_nus_c_t * p_ble_nus_c, uint8_t * p_string, uint16_t length)
 {
@@ -335,8 +291,6 @@ uint32_t ble_nus_c_handles_assign(ble_nus_c_t               * p_ble_nus,
         p_ble_nus->handles.nus_tx_cccd_handle = p_peer_handles->nus_tx_cccd_handle;
         p_ble_nus->handles.nus_tx_handle      = p_peer_handles->nus_tx_handle;
         p_ble_nus->handles.nus_rx_handle      = p_peer_handles->nus_rx_handle;
-        p_ble_nus->handles.nus_IMG_handle     = p_peer_handles->nus_IMG_handle; // Testing assigning IMG handle
-        p_ble_nus->handles.nus_IMG_cccd_handle= p_peer_handles->nus_IMG_cccd_handle; //Testing assigning IMG cccd handle
     }
     return nrf_ble_gq_conn_handle_register(p_ble_nus->p_gatt_queue, conn_handle);
 }

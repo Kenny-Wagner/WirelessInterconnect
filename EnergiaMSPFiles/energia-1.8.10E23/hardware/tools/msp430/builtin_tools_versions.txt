@@ -1,0 +1,4 @@
+energia.msp430-gcc=4.6.7
+energia.msp430-gcc=4.6.7
+energia.msp430-gcc=4.6.7
+energia.msp430-gcc=4.6.7
