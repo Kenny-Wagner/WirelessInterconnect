@@ -84,8 +84,8 @@ extern "C" {
 #define BSP_BUTTON_2   BUTTON_3
 #define BSP_BUTTON_3   BUTTON_4
 
-#define RX_PIN_NUMBER  8//NRF_GPIO_PIN_MAP(1,9)
-#define TX_PIN_NUMBER  6//NRF_GPIO_PIN_MAP(0,17)
+#define RX_PIN_NUMBER  NRF_GPIO_PIN_MAP(1,9) //8
+#define TX_PIN_NUMBER  NRF_GPIO_PIN_MAP(0,17) //6
 #define CTS_PIN_NUMBER 7
 #define RTS_PIN_NUMBER 5
 #define HWFC           true

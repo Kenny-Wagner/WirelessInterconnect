@@ -182,14 +182,17 @@ uint32_t packet_error_rate_timeout_handler(void)
         // NRF_TIMER_TX_READY->TASKS_CLEAR = 1;
         // NRF_TIMER_RX_CRCOK->TASKS_CLEAR = 1;
 
-        //NRF_LOG_INFO( "Float " NRF_LOG_FLOAT_MARKER "\r\n", NRF_LOG_FLOAT(radio_packet_success_rate));
+        //NRF_LOG_INFO( "Float " NRF_LOG_FLOAT_MARKER "\r\n", NRF_LOG_FLOAT(m_accumlated_radio_packet.radio_packet_success_rate));
 
         m_accumlated_radio_packet.radio_packet_crcok += radio_packet_crcok;
         m_accumlated_radio_packet.radio_packet_ready += radio_packet_ready;
 
-        NRF_LOG_DEBUG("PER accumulated %d, %d", m_accumlated_radio_packet.radio_packet_ready, m_accumlated_radio_packet.radio_packet_crcok);
+        //NRF_LOG_DEBUG("PER accumulated %d, %d", m_accumlated_radio_packet.radio_packet_ready, m_accumlated_radio_packet.radio_packet_crcok);
 
-        m_accumlated_radio_packet.radio_packet_success_rate = (m_accumlated_radio_packet.radio_packet_crcok * 100)/(m_accumlated_radio_packet.radio_packet_ready);
+        m_accumlated_radio_packet.radio_packet_success_rate = ((m_accumlated_radio_packet.radio_packet_crcok * 100)/(m_accumlated_radio_packet.radio_packet_ready));
+        float result = ((m_accumlated_radio_packet.radio_packet_crcok * 100.f)/(m_accumlated_radio_packet.radio_packet_ready));
+
+        //NRF_LOG_INFO( "Float " NRF_LOG_FLOAT_MARKER "\r\n", NRF_LOG_FLOAT(get_accumlated_packet_success_rate()));
 
         if (radio_packet_ready > 0xFFFF0000)
         {
@@ -206,7 +209,8 @@ uint32_t get_packet_success_rate(void)
         return radio_packet_success_rate;
 }
 
-void get_accumlated_packet_success_rate(packet_error_t *per)
+void get_accumlated_packet_success_rate(void)
 {
-      *per = m_accumlated_radio_packet;
+      float result = (100.f - (m_accumlated_radio_packet.radio_packet_crcok * 100.f)/(m_accumlated_radio_packet.radio_packet_ready));
+      NRF_LOG_INFO( "PER: " NRF_LOG_FLOAT_MARKER "%%", NRF_LOG_FLOAT(result));
 }
