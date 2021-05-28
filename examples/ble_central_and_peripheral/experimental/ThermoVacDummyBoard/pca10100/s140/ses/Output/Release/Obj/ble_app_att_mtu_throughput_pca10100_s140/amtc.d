@@ -1,5 +1,5 @@
 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amtc.o: \
- C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ble_app_att_mtu_throughput_2\amtc.c \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ThermoVacDummyBoard\amtc.c \
  ../config/sdk_config.h \
  ../../../../../../../components/ble/ble_db_discovery/ble_db_discovery.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
@@ -70,7 +70,7 @@ Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amtc.o: \
  ../../../../../../../components/ble/common/ble_srv_common.h \
  ../../../../../../../components/softdevice/s140/headers/ble_gap.h \
  ../../../../../../../components/softdevice/s140/headers/ble_gatt.h \
- C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ble_app_att_mtu_throughput_2\amt.h \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ThermoVacDummyBoard\amt.h \
  ../../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.h \
  ../../../../../../../components/libraries/log/nrf_log.h \
  ../../../../../../../components/libraries/strerror/nrf_strerror.h \

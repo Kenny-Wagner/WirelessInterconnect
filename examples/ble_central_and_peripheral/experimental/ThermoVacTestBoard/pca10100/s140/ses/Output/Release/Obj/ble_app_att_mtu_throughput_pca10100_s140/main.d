@@ -1,11 +1,11 @@
 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/main.o: \
- C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ble_app_att_mtu_throughput\main.c \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ThermoVacTestBoard\main.c \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdbool.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/string.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/__crossworks.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdio.h \
- C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ble_app_att_mtu_throughput\amt.h \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ThermoVacTestBoard\amt.h \
  ../../../../../../../components/softdevice/s140/headers/ble.h \
  ../../../../../../../components/softdevice/s140/headers/nrf_svc.h \
  ../../../../../../../components/softdevice/s140/headers/nrf_error.h \
@@ -69,7 +69,7 @@ Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/main.o: \
  ../../../../../../../components/libraries/experimental_section_vars/nrf_section.h \
  ../../../../../../../components/ble/nrf_ble_gatt/nrf_ble_gatt.h \
  ../../../../../../../components/softdevice/s140/headers/ble_gatt.h \
- C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ble_app_att_mtu_throughput\counter.h \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ThermoVacTestBoard\counter.h \
  ../../../../../../../components/softdevice/s140/headers/ble_hci.h \
  ../../../../../../../modules/nrfx/hal/nrf_gpio.h \
  ../../../../../../../modules/nrfx/nrfx.h \

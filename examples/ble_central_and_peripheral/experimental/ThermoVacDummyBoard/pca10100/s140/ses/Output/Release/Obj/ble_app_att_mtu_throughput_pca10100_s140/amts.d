@@ -1,6 +1,6 @@
 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amts.o: \
- C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ble_app_att_mtu_throughput_2\amts.c \
- C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ble_app_att_mtu_throughput_2\amt.h \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ThermoVacDummyBoard\amts.c \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ThermoVacDummyBoard\amt.h \
  ../../../../../../../components/softdevice/s140/headers/ble.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  ../../../../../../../components/softdevice/s140/headers/nrf_svc.h \

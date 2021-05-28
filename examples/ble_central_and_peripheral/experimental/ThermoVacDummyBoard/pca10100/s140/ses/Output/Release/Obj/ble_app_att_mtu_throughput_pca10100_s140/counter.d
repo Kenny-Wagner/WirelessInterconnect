@@ -1,6 +1,6 @@
 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/counter.o: \
- C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ble_app_att_mtu_throughput_2\counter.c \
- C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ble_app_att_mtu_throughput_2\counter.h \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ThermoVacDummyBoard\counter.c \
+ C:\Nordic_Semi\WirelessInterconnect\examples\ble_central_and_peripheral\experimental\ThermoVacDummyBoard\counter.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.10/include/stdint.h \
  ../../../../../../../integration/nrfx/legacy/nrf_drv_rtc.h \
  ../../../../../../../modules/nrfx/drivers/include/nrfx_rtc.h \

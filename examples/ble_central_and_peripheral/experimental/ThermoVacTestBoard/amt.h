@@ -68,7 +68,7 @@ extern "C" {
 #define AMT_RCV_BYTES_CNT_CHAR_UUID         0x1525
 
 #define AMT_RCV_BYTES_CNT_MAX_LEN           4
-#define AMT_BYTE_TRANSFER_CNT               (1024*1024*100)
+#define AMT_BYTE_TRANSFER_CNT               (1024*1024*10)
 
 
 /**

@@ -11894,7 +11894,7 @@ LOAD linker stubs
  .comment       0x0000000000000024       0x25 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/packet_error_rate.o
  .comment       0x0000000000000024       0x25 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 5.10/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
 
-.debug_line     0x0000000000000000    0x2ae5e
+.debug_line     0x0000000000000000    0x2ae3e
  .debug_line    0x0000000000000000      0x1fd Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/thumb_crt0.o
  .debug_line    0x00000000000001fd      0x761 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_log_backend_serial.o
  .debug_line    0x000000000000095e      0xa2f Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_log_backend_uart.o
@@ -11934,23 +11934,23 @@ LOAD linker stubs
  .debug_line    0x0000000000019047     0x1890 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrfx_uart.o
  .debug_line    0x000000000001a8d7     0x180b Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrfx_uarte.o
  .debug_line    0x000000000001c0e2      0xe8a Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/bsp.o
- .debug_line    0x000000000001cf6c      0xcc9 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amtc.o
- .debug_line    0x000000000001dc35      0xdd3 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amts.o
- .debug_line    0x000000000001ea08      0x755 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/counter.o
- .debug_line    0x000000000001f15d      0xae6 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/example_cmds.o
- .debug_line    0x000000000001fc43     0x1f2e Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/main.o
- .debug_line    0x0000000000021b71     0x130a Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/SEGGER_RTT.o
- .debug_line    0x0000000000022e7b      0xf90 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_advdata.o
- .debug_line    0x0000000000023e0b     0x11e2 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_db_discovery.o
- .debug_line    0x0000000000024fed      0x70a Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_srv_common.o
- .debug_line    0x00000000000256f7      0xbb7 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_gatt.o
- .debug_line    0x00000000000262ae      0xe69 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_gq.o
- .debug_line    0x0000000000027117      0x6d1 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_qwr.o
- .debug_line    0x00000000000277e8      0xda0 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_scan.o
- .debug_line    0x0000000000028588      0xada Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh.o
- .debug_line    0x0000000000029062      0x9eb Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh_ble.o
- .debug_line    0x0000000000029a4d      0x630 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh_soc.o
- .debug_line    0x000000000002a07d      0xde1 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/packet_error_rate.o
+ .debug_line    0x000000000001cf6c      0xcc1 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amtc.o
+ .debug_line    0x000000000001dc2d      0xdcb Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amts.o
+ .debug_line    0x000000000001e9f8      0x74d Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/counter.o
+ .debug_line    0x000000000001f145      0xae6 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/example_cmds.o
+ .debug_line    0x000000000001fc2b     0x1f26 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/main.o
+ .debug_line    0x0000000000021b51     0x130a Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/SEGGER_RTT.o
+ .debug_line    0x0000000000022e5b      0xf90 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_advdata.o
+ .debug_line    0x0000000000023deb     0x11e2 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_db_discovery.o
+ .debug_line    0x0000000000024fcd      0x70a Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_srv_common.o
+ .debug_line    0x00000000000256d7      0xbb7 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_gatt.o
+ .debug_line    0x000000000002628e      0xe69 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_gq.o
+ .debug_line    0x00000000000270f7      0x6d1 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_qwr.o
+ .debug_line    0x00000000000277c8      0xda0 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_scan.o
+ .debug_line    0x0000000000028568      0xada Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh.o
+ .debug_line    0x0000000000029042      0x9eb Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh_ble.o
+ .debug_line    0x0000000000029a2d      0x630 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh_soc.o
+ .debug_line    0x000000000002a05d      0xde1 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/packet_error_rate.o
 
 .debug_info     0x0000000000000000    0x69c74
  .debug_info    0x0000000000000000       0x22 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/thumb_crt0.o
@@ -12182,7 +12182,7 @@ LOAD linker stubs
  .debug_aranges
                 0x00000000000018a8       0x58 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/packet_error_rate.o
 
-.debug_str      0x0000000000000000    0xbd797
+.debug_str      0x0000000000000000    0xbd7f0
  .debug_str     0x0000000000000000       0xe0 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/thumb_crt0.o
  .debug_str     0x00000000000000e0    0x8d471 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_log_backend_serial.o
                                       0x8f766 (size before relaxing)
@@ -12260,39 +12260,39 @@ LOAD linker stubs
                                       0x979f5 (size before relaxing)
  .debug_str     0x00000000000ab3a6     0x2481 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/bsp.o
                                       0x96467 (size before relaxing)
- .debug_str     0x00000000000ad827     0x8d41 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amtc.o
-                                      0x99e31 (size before relaxing)
- .debug_str     0x00000000000b6568      0x898 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amts.o
-                                      0x99cdc (size before relaxing)
- .debug_str     0x00000000000b6e00      0x5da Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/counter.o
-                                      0x939fb (size before relaxing)
- .debug_str     0x00000000000b73da      0x346 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/example_cmds.o
+ .debug_str     0x00000000000ad827     0x8db2 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amtc.o
+                                      0x99e20 (size before relaxing)
+ .debug_str     0x00000000000b65d9      0x890 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/amts.o
+                                      0x99ccb (size before relaxing)
+ .debug_str     0x00000000000b6e69      0x5d2 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/counter.o
+                                      0x939eb (size before relaxing)
+ .debug_str     0x00000000000b743b      0x346 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/example_cmds.o
                                       0x96240 (size before relaxing)
- .debug_str     0x00000000000b7720     0x2c47 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/main.o
-                                      0xaa72c (size before relaxing)
- .debug_str     0x00000000000ba367      0x50f Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/SEGGER_RTT.o
+ .debug_str     0x00000000000b7781     0x2c3f Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/main.o
+                                      0xaa71b (size before relaxing)
+ .debug_str     0x00000000000ba3c0      0x50f Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/SEGGER_RTT.o
                                       0x8475e (size before relaxing)
- .debug_str     0x00000000000ba876      0x492 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_advdata.o
+ .debug_str     0x00000000000ba8cf      0x492 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_advdata.o
                                       0x91e81 (size before relaxing)
- .debug_str     0x00000000000bad08      0x54f Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_db_discovery.o
+ .debug_str     0x00000000000bad61      0x54f Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_db_discovery.o
                                       0x99e29 (size before relaxing)
- .debug_str     0x00000000000bb257      0x2f1 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_srv_common.o
+ .debug_str     0x00000000000bb2b0      0x2f1 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/ble_srv_common.o
                                       0x88825 (size before relaxing)
- .debug_str     0x00000000000bb548      0x48c Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_gatt.o
+ .debug_str     0x00000000000bb5a1      0x48c Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_gatt.o
                                       0x949e4 (size before relaxing)
- .debug_str     0x00000000000bb9d4      0x2ae Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_gq.o
+ .debug_str     0x00000000000bba2d      0x2ae Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_gq.o
                                       0x98573 (size before relaxing)
- .debug_str     0x00000000000bbc82      0x21b Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_qwr.o
+ .debug_str     0x00000000000bbcdb      0x21b Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_qwr.o
                                       0x92921 (size before relaxing)
- .debug_str     0x00000000000bbe9d      0x3cf Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_scan.o
+ .debug_str     0x00000000000bbef6      0x3cf Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_ble_scan.o
                                       0x95157 (size before relaxing)
- .debug_str     0x00000000000bc26c      0x529 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh.o
+ .debug_str     0x00000000000bc2c5      0x529 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh.o
                                       0x8ffc2 (size before relaxing)
- .debug_str     0x00000000000bc795      0x735 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh_ble.o
+ .debug_str     0x00000000000bc7ee      0x735 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh_ble.o
                                       0x94fdb (size before relaxing)
- .debug_str     0x00000000000bceca      0x1bd Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh_soc.o
+ .debug_str     0x00000000000bcf23      0x1bd Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/nrf_sdh_soc.o
                                       0x8efd0 (size before relaxing)
- .debug_str     0x00000000000bd087      0x710 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/packet_error_rate.o
+ .debug_str     0x00000000000bd0e0      0x710 Output/Release/Obj/ble_app_att_mtu_throughput_pca10100_s140/packet_error_rate.o
                                       0x9f033 (size before relaxing)
 
 .debug_ranges   0x0000000000000000     0x4d70
